@@ -1,0 +1,24 @@
+
+.copy{margin: 0;
+	text-align: center;
+	font-size: 10px;
+	color: #9aa2ac;
+	margin-bottom: 15px;
+}
+footer{
+	height: 110px;
+	width: 101.3%;
+	margin-top: -8px;
+	margin-bottom: -8px;
+	margin-left: -8px;
+	background-color: #40464f;
+}
+.imgfoot{
+	margin-top: 20px;
+}
+html{
+	overflow-x: hidden;
+}
+body{
+	background-color: #f4f5f6;
+}
