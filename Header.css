@@ -1,0 +1,16 @@
+.up{
+  width: 100%;
+  background-color: #40464f;
+  height: 62px;
+}
+p{	
+	float: left;
+	margin-right: 10.5%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+p:hover{
+	color: #e8b32e;
+	text-decoration: underline;
+}
