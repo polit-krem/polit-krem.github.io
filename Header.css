@@ -1,0 +1,19 @@
+.up{
+  width: 101.3%;
+  background-color: #40464f;
+  height: 62px;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+.par{	
+	float: left;
+	margin-right: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #ffffff;
+	font-size: 16px;
+}
+.par:hover{
+	color: #e8b32e;
+	text-decoration: underline;
+}
