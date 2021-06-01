@@ -1,0 +1,18 @@
+p{
+	margin: 0;
+	text-align: center;
+}
+.copy{
+	font-size: 10px;
+	color: #9aa2ac;
+	margin-bottom: 15px;
+}
+footer{
+	height: 110px;
+	width: 960px;
+	background-color: #40464f;
+}
+img{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
