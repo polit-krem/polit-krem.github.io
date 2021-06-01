@@ -1,0 +1,17 @@
+.up{
+  width: 100%;
+  background-color: #40464f;
+  height: 62px;
+}
+.par{	
+	float: left;
+	margin-right: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #ffffff;
+	font-size: 16px;
+}
+.par:hover{
+	color: #e8b32e;
+	text-decoration: underline;
+}
