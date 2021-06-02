@@ -65,7 +65,7 @@ a{
   color: #bcc1c8;
 }
 .selgr{
-  border: 0 !important; 
+  border: 1px solid  #ffffff; !important; 
   -webkit-appearance: none;
   appearance: none;
   width: 130px; 
