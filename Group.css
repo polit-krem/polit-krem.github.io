@@ -3,7 +3,7 @@ body{
   
 }
 a{
-    
+    color: #e8b32e;
     text-decoration: none;
 }
 .zaggr{
@@ -11,6 +11,7 @@ a{
   margin-top: 80px;
   margin-bottom: 40px;
   margin-left: -844px;
+  font-family: Ledger;
 }
 .inpgr{
   border: none;
@@ -63,17 +64,12 @@ a{
 .selgr:hover{
   cursor: pointer;
 }
-.selgr:after{
-  content: "asdasdasd";
-  color: purple;
-}
 .divselgr{
   width: 940px;
   height: 40px;
   background-color: white;
   margin-top: 40px;
   border-bottom: 1px solid #bcc1c8;
-  
 }
 .divgrtabl1{
   width: 940px;
@@ -204,49 +200,81 @@ border-bottom: 1px solid #bcc1c8;
 }
 .polos1{
   width: 5px;
-  height: 72px;
+  height: 65px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -3px;
   margin-left: -1500px;
   display: none;
 }
 .polos2{
   width: 5px;
-  height: 72px;
+  height: 65px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -3px;
   margin-left: -1500px;
   display: none;
 }
 .polos3{
   width: 5px;
-  height: 72px;
+   height: 65px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -3px;
   display: none;
   margin-left: -1500px;
 }
 .polos4{
   width: 5px;
-  height: 72px;
+   height: 65px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -3px;
   display: none;
   margin-left: -1500px;
 }
 .polos5{
   width: 5px;
-  height: 72px;
+  height: 65px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -3px;
   display: none;
   margin-left: -1500px;
 }
 .pargrgl{
   text-align: center;
+}
+.search{
+  width: 960px;
+  height: 50px;
+  margin: 40px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+}
+.search_icon{
+  width: 23px;
+  height: 23px;
+}
+.search_white_48dp {
+  width: 32px;
+  height: 32px;
+  margin: 9px 20px 9px -880px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.search_input_div{
+  width: 70px;
+  height: 20px;
+  margin: -10px 20px 9px -750px;
+}
+.search_input{
+  width: 667px;
+  height: 20px;
+  font-family: AvenirNextCyr;
+  font-size: 16px;
+  color: #bcc1c8;
+  border: 1px solid #ffffff;
 }
