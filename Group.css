@@ -1,11 +1,11 @@
 .zag{
-	font-size: 36px;
-	margin-top: 80px;
-	margin-bottom: 40px;
+  font-size: 36px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 .inpgr{
-	border: none;
-	width: 868px;
+  border: none;
+  width: 868px;
   height: 50px;
   padding-left: 20px;
   margin-bottom: 51px;
@@ -30,7 +30,7 @@
   box-shadow: 0 1px 2px 0 #bcc1c8;
 }
 .parselgr{
-	width: 204px;
+  width: 204px;
   height: 18px;
   margin: 1px 20px 1px 0;
   font-family: AvenirNextCyr;
@@ -55,4 +55,102 @@
   height: 40px;
   background-color: white;
   margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.divgrtabl1{
+  width: 940px;
+  height: 62px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.divgrtabl2{
+  padding: 10px 0 0;
+  width: 940px;
+  height: 62px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  margin-top: -50px;
+
+}
+.divgrtabl3{
+  padding: 10px 0 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  width: 940px;
+  height: 62px;
+
+}
+.divgrtabl4{
+  padding: 10px 0 0;
+  width: 940px;
+  height: 62px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.divgrtabl5{
+  width: 940px;
+  height: 62px;
+  padding: 10px 0 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.divgrtabl6{
+  width: 940px;
+  height: 62px;
+ padding: 10px 0 0;
+ border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.pargr1{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.pargr2{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 175px;
+  margin-right: 116px;
+  font-weight: bold;
+}
+.pargr3{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 116px;
+  font-weight: bold; 
+}
+.imggr{
+  float: right;
+}
+.imggr:hover{
+  cursor: pointer;
+}
+.pargr4{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 97px;
+}
+.pargr5{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 145px;
+}
+.pargr6{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.polos1{
+  width: 5px;
+  height: 60px;
+  margin: 10px 935px 0 0;
+  background-color: #e8b32e;
 }
