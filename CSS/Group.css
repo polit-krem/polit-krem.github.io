@@ -11,6 +11,7 @@ a{
   margin-top: 80px;
   margin-bottom: 40px;
   margin-left: -844px;
+  font-family: Ledger;
 }
 .inpgr{
   border: none;
@@ -33,126 +34,140 @@ a{
   cursor:pointer;
 }
 .divinpgr{
-  width: 940px;
+  width: 958px;
   height:52px;
   box-shadow: 0 1px 2px 0 #bcc1c8;
 }
 .parselgr{
   width: 244px;
   height: 18px;
-  margin: 1px 20px 1px 0;
+  margin: 13px 67px 1px 0;
   font-family: AvenirNextCyr;
   font-size: 14px;
   color: #5c6470;
   float: right;
-  margin-top: 11px;
+}
+.select{
+  float: right;
+  width: 130px;
+  height: 20px;
+  margin: 12px -280px 0 0;
+  position: relative;
+  background:  url(IMG/arrow-drop-down-white-48-dp.svg) no-repeat right;
+  background-size: 10px;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+} 
+.fa-caret-down{
+  z-index: 1;
+  cursor: pointer;
+  color: #bcc1c8;
 }
 .selgr{
   border: 0 !important; 
   -webkit-appearance: none;
   appearance: none;
-  background:  url(IMG/arrow-drop-down-white-48-dp.svg) no-repeat right;
-  outline: 0;
-  width: 125px; 
+  width: 130px; 
+  padding: 0 10px 0 0;
   text-indent: 0.01px; 
-  text-overflow: ""; 
-  margin-bottom: -10px; 
+  margin-bottom: 3px; 
   color: #25282d;
   margin-left: 20px;
-}
-.selgr:hover{
   cursor: pointer;
-}
-.selgr:after{
-  content: "asdasdasd";
-  color: purple;
+  z-index: 1000;
+  font-family: AvenirNextCyr;
 }
 .divselgr{
-  width: 940px;
+  width: 958px;
   height: 40px;
-  background-color: white;
+  background-color: #ffffff;
   margin-top: 40px;
   border-bottom: 1px solid #bcc1c8;
-  
+  margin-left: -10px;
+  border-radius: 5px 0 0 0;
 }
 .divgrtabl1{
-  width: 940px;
+  width: 958px;
   height: 62px;
   border-bottom: 1px solid #bcc1c8;
-  background-color: white;
-  margin-top: 1px;
+  background-color: #ffffff;
+  margin-left: -10px;
 }
 .divgrtabl2{
   
-  width: 940px;
+  width: 958px;
   height: 62px;
   border-bottom: 1px solid #bcc1c8;
-  display: inline-block;
-  background-color: white;
+  margin-left: -10px;
+  background-color: #ffffff;
 }
 .divgrtabl2:hover{
   background-color: #f4f5f6;
   cursor: pointer;
 }
-.divgrtabl2:hover .polos1 {
+.divgrtabl2:hover .polos {
   display: inline-block;
 }
 .divgrtabl3{
   border-bottom: 1px solid #bcc1c8;
-  width: 940px;
+  width: 958px;
   height: 62px;
-  display: inline-block;
-  background-color: white;
+  margin-left: -10px;
+  background-color: #ffffff;
 }
 .divgrtabl3:hover{
   background-color: #f4f5f6;
   cursor: pointer;
 }
-.divgrtabl3:hover .polos2 {
+.divgrtabl3:hover .polos {
   display: inline-block;
 }
 .divgrtabl4{
-  width: 940px;
+  width: 958px;
   height: 62px;
+  margin-left: -10px;
   border-bottom: 1px solid #bcc1c8;
-  display: inline-block;
-  background-color: white;
+  
+  background-color: #ffffff;
 }
 .divgrtabl4:hover{
   background-color: #f4f5f6;
   cursor: pointer;
 }
-.divgrtabl4:hover .polos3 {
+.divgrtabl4:hover .polos {
   display: inline-block;
 }
 .divgrtabl5{
-  width: 940px;
+  width: 958px;
+  margin-left: -10px;
   height: 62px;
 border-bottom: 1px solid #bcc1c8;
-   display: inline-block;
-   background-color: white;
+   
+   background-color: #ffffff;
 }
 .divgrtabl5:hover{
   background-color: #f4f5f6;
   cursor: pointer;
 }
-.divgrtabl5:hover .polos4 {
+.divgrtabl5:hover .polos {
   display: inline-block;
 }
 .divgrtabl6{
-  width: 940px;
+  width: 960px;
+  margin-left: -8px;
   height: 62px;
-
+  border-radius: 0 0 0 5px;
   border-bottom: 1px solid #bcc1c8;
-  display: inline-block;
+  
   margin-bottom: 236px;
-  background-color: white;
+  background-color: #ffffff;
 }
 .divgrtabl6:hover{
   cursor: pointer;
   background-color: #f4f5f6;
 }
-.divgrtabl6:hover .polos5 {
+.divgrtabl6:hover .polos {
   display: inline-block;
 }
 .pargr1{
@@ -189,64 +204,70 @@ border-bottom: 1px solid #bcc1c8;
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 40px;
-  margin-right: 97px;
+  margin-right: 63px;
 }
 .pargr5{
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-right: 145px;
+  margin-right: 150px;
 }
 .pargr6{
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.polos1{
+.polos{
   width: 5px;
-  height: 72px;
+  height: 64px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
-  margin-left: -1500px;
+  margin-left: -1470px;
+  margin-top: -1px;
   display: none;
 }
-.polos2{
-  width: 5px;
-  height: 72px;
-  background-color: #e8b32e;
-  display: inline-block;
-  margin-top: -10px;
-  margin-left: -1500px;
-  display: none;
-}
-.polos3{
-  width: 5px;
-  height: 72px;
-  background-color: #e8b32e;
-  display: inline-block;
-  margin-top: -10px;
-  display: none;
-  margin-left: -1500px;
-}
-.polos4{
-  width: 5px;
-  height: 72px;
-  background-color: #e8b32e;
-  display: inline-block;
-  margin-top: -10px;
-  display: none;
-  margin-left: -1500px;
-}
-.polos5{
-  width: 5px;
-  height: 72px;
-  background-color: #e8b32e;
-  display: inline-block;
-  margin-top: -10px;
-  display: none;
-  margin-left: -1500px;
-}
+
 .pargrgl{
   text-align: center;
+}
+.search{
+  width: 964px;
+  height: 50px;
+  margin: 40px 0 0 0px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+}
+.search_icon{
+  width: 23px;
+  height: 23px;
+}
+.search_white_48dp {
+  width: 32px;
+  height: 32px;
+  margin: 9px 20px 9px -880px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.search_input_div{
+  width: 70px;
+  height: 20px;
+  margin: -10px 20px 9px -750px;
+}
+.search_input{
+  width: 667px;
+  height: 20px;
+  font-family: AvenirNextCyr;
+  font-size: 16px;
+  color: #bcc1c8;
+  border: 1px solid #ffffff;
+}
+.divgrtabl{
+  width: 960px;
+  margin-left: 8px;
+  height: auto;
+  
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
 }
