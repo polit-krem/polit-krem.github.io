@@ -1,0 +1,25 @@
+.copy{
+	font-size: 10px;
+	color: #9aa2ac;
+	margin-bottom: 15px;
+}
+footer{
+	height: 110px;
+	width: 100%;
+	background-color: #40464f;
+
+}
+.imgfoot{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+html{
+	overflow-x: hidden;
+}
+*{
+	margin: 0;
+}
+body{
+	background-color: #f4f5f6;
+
+}
