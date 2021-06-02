@@ -1,7 +1,7 @@
 .up{
-  width: 100%;
-  background-color: #40464f;
-  height: 62px;
+  	width: 100%;
+  	background-color: #40464f;
+  	height: 62px;
 }
 .par{	
 	float: left;
@@ -12,6 +12,11 @@
 	font-size: 16px;
 }
 .par:hover{
+	color: #e8b32e;
+	border-bottom: 1px solid #e8b32e;
+	cursor: pointer;
+}
+.pargr{
 	color: #e8b32e;
 	border-bottom: 1px solid #e8b32e;
 	cursor: pointer;
@@ -33,8 +38,8 @@
 	margin-bottom: 20px;
 	color: #ffffff;
 	font-size: 16px;
-	border-bottom: none;
 	cursor: auto;
+	border-bottom: none;
 }
 *{
 	margin: 0;
