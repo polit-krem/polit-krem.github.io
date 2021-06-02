@@ -1,0 +1,36 @@
+.Group_item {
+  width: 101.3%;
+  height: 1692px;
+  background-color: #f4f5f6;
+  margin-top: -35px;
+  margin-left: -8px;
+}
+.Group_Name{
+  width: 324px;
+  height: 50px;
+  margin-left: 340px;
+  padding-top: 80px;
+  font-family: Ledger;
+  font-size: 36px;
+  color: #212121;
+}
+.Rectangle {
+  width: 330px;
+  height: 22px;
+  margin-left: 340px;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+.Rectangle_Four {
+  width: 330px;
+  height: 50px;
+  margin-left: 340px;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
