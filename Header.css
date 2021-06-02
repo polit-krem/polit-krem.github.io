@@ -15,5 +15,26 @@
 }
 .par:hover{
 	color: #e8b32e;
-	text-decoration: underline;
+	border-bottom: 1px solid #e8b32e;
+	cursor: pointer;
+}
+.imgh{
+	float: left; 
+	margin:  10px 10px 17px 15px;
+}
+.imgh:hover{
+	cursor: pointer;
+}
+.alogo{
+	cursor: pointer;
+}
+#par1:hover{
+	float: left;
+	margin-right: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #ffffff;
+	font-size: 16px;
+	border-bottom: none;
+	cursor: auto;
 }

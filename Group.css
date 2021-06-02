@@ -53,6 +53,9 @@ body{
   text-overflow: ""; 
   margin-bottom: -10px; 
 }
+.selgr:hover{
+  cursor: pointer;
+}
 .divselgr{
   width: 940px;
   height: 40px;
