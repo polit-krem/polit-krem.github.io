@@ -225,9 +225,9 @@ footer{
     <div class="up">
 		<img src="IMG/logo.png" alt="" style="float: left; margin:  10px 10px 17px 15px;">
 		<p class="par1">Довідник наукового ліцею «Політ»</p>
-		<a href="index.html"></a><p class="par">Головна</p></a>
-		<a href="Groups1.html"></a><p class="par">Групи</p></a>
-		<a href="Teachers1.html"></a><p class="par">Учителі</p></a>
+		<a href="index.html"><p class="par">Головна</p></a>
+		<a href="Groups1.html"><p class="par">Групи</p></a>
+		<a href="Teachers1.html"><p class="par">Учителі</p></a>
 		<a href="Contacts.html"><p class="par">Контакти</p></a>
 	</div>
 </header>
@@ -237,8 +237,8 @@ footer{
         <h1 class="golova">Ласкаво просимо на сайт довідника наукового ліцею «Політ»</h1>
         <h2 class="telo">Шановний гостю! Даний сервіс допоможе тобі ознайомитися зі складом учнівських груп, інформацією про своїх одногрупників, учнів з інших груп та
         вчителів, знайти знайомих і друзів за інтересами.</h2>
-        <div class="Rectangle1"><h3 class="text1">Групи</h3></div>
-        <div class="Rectangle2"><h3 class="text2">Учителі</h3></div>
+        <div class="Rectangle1" onclick="group();"><h3 class="text1">Групи</h3></div>
+        <div class="Rectangle2" onclick="teachers();"><h3 class="text2">Учителі</h3></div>
 
         <img src="pic-main.png" class="Pic_main">
     </div>
@@ -247,5 +247,13 @@ footer{
 		<p class="parag"><img src="IMG/logo.png" alt="" class="img"></p>
 		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 </footer>
+<script>
+    function group(){
+        window.location.href = 'Group.html';
+    }
+    function teachers(){
+        window.location.href = 'Teachers.html';
+    }
+</script>
 </body>
 </html>
