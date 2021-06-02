@@ -1,6 +1,10 @@
 body{
   background-color: #f4f5f6;
 }
+a{
+    color: #e8b32e;
+    text-decoration: none;
+}
 .zaguch{
   font-size: 36px;
   margin-top: 80px;
