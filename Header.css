@@ -1,9 +1,7 @@
 .up{
-  width: 101.3%;
+  width: 100%;
   background-color: #40464f;
   height: 62px;
-  margin-left: -8px;
-  margin-top: -8px;
 }
 .par{	
 	float: left;
@@ -37,4 +35,8 @@
 	font-size: 16px;
 	border-bottom: none;
 	cursor: auto;
+}
+*{
+	margin: 0;
+	padding: 0;
 }
