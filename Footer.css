@@ -5,12 +5,13 @@
 }
 footer{
 	height: 110px;
-	width: 101.3%;
+	width: 100%;
 	background-color: #40464f;
 
 }
 .imgfoot{
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 html{
 	overflow-x: hidden;
@@ -20,4 +21,5 @@ html{
 }
 body{
 	background-color: #f4f5f6;
+
 }
