@@ -7,8 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="CSS/Footer.css">
   <link rel="stylesheet" href="CSS/Header.css">
-<link rel="stylesheet" href="Teacher_item.css">
-  <title>Teacher_item</title>
+<link rel="stylesheet" href="CSS/Teacher_item.css">
+
+<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Довідник наукового ліцею «Політ»</title>
+  
 </head>
 <body>
   <header><div class="up">
@@ -19,12 +23,8 @@
     <a href="Teachers.html"><p class="par">Учителі</p></a>
     <a href="Contacts.html"><p class="par">Контакти</p></a>
   </div></header>
-<div class="golova">
-  <p class="parag">
-  <img src="west-black-48-dp.svg"
-     class="west_black_48dp">
-     <h3 class="restar">Повернутися до групи</h3>
-    </p>
+<div class="golova" id="date_Nam">
+  
      <div class="Name_background">
       <h1 class="text1">Іванов Іван Іванович</h1>
       <img src="IMG/pic-teacher-item.png"
@@ -38,9 +38,8 @@
                     <div class="Path">
                         <img src="IMG/emoji-events-black-48-dp.svg" class="self_improvement_black_48dp">
                     </div>
-                <div class="date">
-                    <h1 class="date_p">Категорія</h1>
-                    <h2 class="date_name" id="date_nam">Вища</h2>
+                <div class="date"  id="data_Nam">
+                    <p class="date_p">Категорія</p>
                 </div>
                 </div>
                 <div class="Rectangle_Two">
@@ -49,16 +48,15 @@
                     </div>
                     <div class="email">
                         <p class="email_name">Класний керівник групи</p>
-                        <p class="email_ex" id="email_ex">ХХ-ХХ-ХХ</p>
+                        <p class="email_ex" id="email_ex"></p>
                     </div>
                 </div>
                 <div class="Rectangle_Three">
                     <div class="Path">
                         <img src="IMG/history-edu-black-48-dp.svg" class="school_black_48dp">
                     </div>
-                    <div class="Favourite">
+                    <div class="Favourite" id="Favourite_name">
                         <p class="Favourite_course">Викладає предмети</p>
-                        <p class="Favourite_name">Предмет 1, Предмет 2, Предмет 3</p>
                     </div>
                 </div>
 
@@ -66,21 +64,17 @@
                     <div class="Path">
                         <img src="IMG/school-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
-                    <div class="subject">
+                    <div class="subject" id="subject_name">
                         <p class="subject_education">Школа олімпійського резерву</p>
-                        <p class="subject_name">Факультатив 1</p>
-                        <p class="subject_name">Факультатив 2</p>
                     </div>
                   </div>
                      <div class="Rectangle_Six">
                     <div class="Path">
                         <img src="IMG/group-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
-                    <div class="interesting">
+                    <div class="interesting" id="interesting_name1">
                         <p class="interesting_education">Викладає в групах</p>
-                        <p class="interesting_name1">Група 1</p>
-                        <p class="interesting_name2">Група 2</p>
-                        <p class="interesting_name2">Група 3</p>
+                        
                     </div>
                   </div>
                      <div class="Rectangle_Seven">
@@ -88,17 +82,104 @@
                         <img src="IMG/workspace-premium-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
                     <div class="achievement">
-                        <p class="achievement_education">Досягнення</p>
-                        <p class="achievement_name1">Назва 1</p>
-                        <p class="achievement_name2">Назва 2</p>
-                        <p class="achievement_name2">Назва 3</p>
+                        <p class="achievement_education" id="achievement_education">Досягнення</p>
+                        
                     </div>
                   </div>
 
 </div>
 <center><footer style="margin-top: 800px;">
-		<img src="IMG/logo.png" class="imgfoot">
+		<a href="index.html"><img src="IMG/logo.png" class="imgfoot"></a>
 		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 	</footer></center>
+  <script>
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+    var new_url = "https://alexmarchukprod.com.ua/teacher?id=" + c;
+
+    window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.rank)
+                    const rank_p = document.createElement("p");
+                    rank_p.className = "date_name";
+                    rank_p.innerHTML = data.rank;
+                    document.querySelector('#data_Nam').appendChild(rank_p);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.group.title)
+                    const email_ex = document.createElement("p");
+                    email_ex.className = "email_ex";
+                    email_ex.innerHTML = data.group.title;
+                    document.querySelector('#email_ex').appendChild(email_ex);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.subjects)
+                    const Favourite_name = document.createElement("p");
+                    Favourite_name.className = "Favourite_name";
+                    Favourite_name.innerHTML = data.subjects;
+                    document.querySelector('#Favourite_name').appendChild(Favourite_name);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.olympicReserve)
+                    const subject_name = document.createElement("p");
+                    subject_name.className = "subject_name";
+                    subject_name.innerHTML = data.olympicReserve;document.querySelector('#subject_name').appendChild(subject_name);
+                    if(data.olympicReserve === null){
+                      subject_name.innerHTML = "Немає";
+                      document.querySelector('#subject_name').appendChild(subject_name);
+                    }
+                    
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.groups)
+                    const non = document.createElement("p");
+                    non.className = "interesting_name2";
+                    non.innerHTML = data.groups;
+                    document.querySelector('#interesting_name1').appendChild(non);
+                    
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.achievements)
+                    const achieve = document.createElement("p");
+                    achieve.className = "achievement_name2";
+                    achieve.innerHTML = data.achievements;
+                    document.querySelector('#achievement_education').appendChild(achieve);
+                    if(data.achievements === null || data.achievements === " " || data.achievements.length == 0){
+                      achieve.innerHTML = "Немає";
+                      document.querySelector('#achievement_education').appendChild(achieve);
+                    }
+                })
+            })
+        });
+  </script>
 </body>
 </html>
