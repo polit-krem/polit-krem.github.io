@@ -36,7 +36,7 @@
 							<input type="text" placeholder="Пошук…" class="search_input">
 						</div>
 					</div>
-		<div class="divgrtablgl" id="api-fetch">
+		<div class="divgrtablgl" style="height: auto; border-radius: 5px;" id="api-fetch">
 			<div class="divselgr">
 				<p class="parselgr">Сортувати за:   
 					<div class="select">
@@ -76,11 +76,17 @@
                         				<p class="pargr4">${item.title}</p>
                                         <p class="pargr5">${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
                                         <p class="pargr6">  ${item.students.length} </p>
-                                        <img src="IMG/expand-more-white-48-dp.svg" class="imggr">`;
+                                        <img src="IMG/expand-more-white-48-dp.svg" class="imggr" style="margin-right:20px" value="${item.id}" onclick="go();">`;
                         document.querySelector('#api-fetch').appendChild(output);
                     })
                 })
             })
     });
+	function go(){
+            var id = event.target.getAttribute('value');;
+            var upl = "Group_Item.html?id=" + id;
+            console.log(upl)
+            window.location.href = upl;
+        }    
 </script>
 </html>
