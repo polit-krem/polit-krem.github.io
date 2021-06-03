@@ -16,25 +16,25 @@
 <body>
     <header>
         <div class="up">
-            <img src="IMG/logo.png" alt="" style="float: left; margin:  10px 10px 17px 15px;">
-            <p class="par">Довідник наукового ліцею «Політ»</p>
-            <p class="par">Головна</p>
-            <p class="par">Групи</p>
-            <p class="par">Учителі</p>
-            <p class="par">Контакти</p>
+            <a href="index.html" class="alogo"><img src="IMG/logo.png" class="imgh"></a>
+		<p class="par" id="par1">Довідник наукового ліцею «Політ»</p>
+		<a href="index.html"><p class="par">Головна</p></a>
+		<a href="Groups.html"><p class="par" class="pargr" >Групи</p></a>
+		<a href="Teachers.html"><p class="par">Учителі</p></a>
+		<a href="Contacts.html"><p class="par">Контакти</p></a>
 	    </div>
     </header>
     <div class="Group_item">
-        <p class="Group_Name">Група XX-XX-XX</p>
+        <p class="Group_Name" id="title">Група </p>
         <div class="One_Main">
             <div class="Rectangle_Main"> 
                 <div class="Rectangle_One">
                         <div class="Path">
                             <img src="IMG/self-improvement-black-48-dp.svg" class="self_improvement_black_48dp">
                         </div>
-                    <div class="teacher">
-                        <h1 class="teacher_p">Класний керівник</h1>
-                        <h2 class="teacher_name" id="teacher_name">Іванов Іван Іванович</h2>
+                    <div class="teacher"id="teacher_name">
+                        <h1 class="teacher_p" >Класний керівник</h1>
+                        
                     </div>
                     <div class="icon">
                             <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
@@ -44,29 +44,26 @@
                         <div class="Path">
                             <img src="IMG/group-black-48-dp.svg" class="group_black_48dp">
                         </div>
-                        <div class="student">
+                        <div class="student" id="students_num">
                             <p class="students">Кількість учнів</p>
-                            <p class="students_num" id="students_num">20</p>
                         </div>
                     </div>
                     <div class="Rectangle_Three">
                         <div class="Path">
                             <img src="IMG/school-black-48-dp.svg" class="school_black_48dp">
                         </div>
-                        <div class="profile">
+                        <div class="profile" id="profile_name">
                             <p class="profile_course">Профіль (напрямок навчання)</p>
-                            <p class="profile_name">Фізико-математичний</p>
+                            
                         </div>
                     </div>
                     <div class="Rectangle_Four">
                         <div class="Path">
                             <img src="IMG/text-snippet-black-48-dp.svg" class="text_snippet_black_48dp">
                         </div>
-                        <div class="subject">
+                        <div class="subject"  id="subject_name">
                             <p class="subject_education">Предмети для поглибленого вивчення</p>
-                            <p class="subject_name">Предмет 1</p>
-                            <p class="subject_name">Предмет 2</p>
-                            <p class="subject_name">Предмет 3</p>
+                             
                         </div>
                 </div>
             </div>
@@ -85,43 +82,122 @@
                 </div>
             </div>
         </div>
-        <div class="Three_Main">
+        <div class="Three_Main" id="api-fetch">
             <div class="fio">
                 <p class="foto">Фото</p>
                 <p class="pib">ПІБ</p>
             </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
+            
         </div>
     </div>
     <center><footer>
-		<img src="IMG/logo.png" class="imgfoot">
+		<a href="index.html"><img src="IMG/logo.png" class="imgfoot"></a>
 		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 	</footer></center>
+
+    <script>
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var v = url.searchParams.get("id");
+    var new_url = "https://alexmarchukprod.com.ua/group?id=" + v;
+
+    window.addEventListener("load", async function() {
+            fetch(new_url)
+                .then((result) => {
+                    result.json().then((data) => {
+                        console.log(data.title)
+                        const title = document.createElement("span");
+                        title.className = "Group_Name";
+                        
+                        title.innerHTML = data.title;
+                        document.querySelector('#title').appendChild(title);
+                    })
+                })
+            });
+            function go1(){
+            var teacher = document.getElementsByClassName(teacher_name);
+            var teachers = teacher.getAttribute('id');
+            console.log()
+            var id = event.target.getAttribute('id');
+            var upl = "Teacher_item.html?id=" + id;
+            console.log(upl)
+            window.location.href = upl;
+        }    
+    window.addEventListener("load", async function() {
+            fetch(new_url)
+                .then((result) => {
+                    result.json().then((data) => {
+                        console.log(data.formMaster.surname)
+                        const teacher_name = document.createElement("p");
+                        teacher_name.id = data.formMaster.id;
+            
+                        teacher_name.className = "teacher_name";
+                        teacher_name.innerHTML = data.formMaster.surname + " " + data.formMaster.name + " " + data.formMaster.patronymic ;
+                        document.querySelector('#teacher_name').appendChild(teacher_name);
+                    })
+                })
+            });  
+            window.addEventListener("load", async function() {
+            fetch(new_url)
+                .then((result) => {
+                    result.json().then((data) => {
+                        console.log(data.formMaster.surname)
+                        const students_num = document.createElement("p");
+                        students_num.className = "students_num";
+                        students_num.innerHTML = data.students.length ;
+                        document.querySelector('#students_num').appendChild(students_num);
+                    })
+                })
+            }); 
+            window.addEventListener("load", async function() {
+            fetch(new_url)
+                .then((result) => {
+                    result.json().then((data) => {
+                        console.log(data.specialization)
+                        const profile_name = document.createElement("p");
+                        profile_name.className = "profile_name";
+                        profile_name.innerHTML = data.specialization ;
+                        document.querySelector('#profile_name').appendChild(profile_name);
+                    })
+                })
+            });    
+            window.addEventListener("load", async function() {
+            fetch(new_url)
+                .then((result) => {
+                    result.json().then((data) => {
+                            console.log(data.advancedSubjects)
+                            const subject_name = document.createElement("p");
+                            subject_name.className = "subject_name";
+                            subject_name.innerHTML =   `<p>${data.advancedSubjects}</p> `;
+                            document.querySelector('#subject_name').appendChild(subject_name);
+                    })
+                })
+            }); 
+            window.addEventListener("load", async function() {
+        fetch("https://alexmarchukprod.com.ua/students")
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((item) => {
+                        const output = document.createElement("div");
+                        output.className = "student_information";
+                        output.innerHTML = `
+                                            <div class="vertical_stripe"></div>
+                                            <img class="Avatar" src="IMG/avatar.png">
+                                            <p class="pib_student" >${item.surname} ${item.name} ${item.patronymic}</p>
+                                            <div class="icon_student">
+                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go2();" style="margin-left: -40px" id="${item.id}"> 
+                                            </div>`;
+                        document.querySelector('#api-fetch').appendChild(output);
+                    })
+                })
+            })
+    });
+    function go2(){
+            var id = event.target.getAttribute('id');;
+            var upl = "pupil_item.html?id=" + id;
+            console.log(upl)
+            window.location.href = upl;
+        } 
+    </script>
 </body>
 </html>
