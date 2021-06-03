@@ -30,15 +30,15 @@
  font-family: 'Ledger', serif;
   font-size: 36px;
   color: #ffffff;
-  padding-top: 40px;
   padding-left: 30px;
+  margin-top: -110px;
 }
 .Pic_pupil_item {
   width: 450px;
   height: 167px;
   object-fit: contain;
   margin-left: 489px;
-  margin-top: -128px;
+  margin-top: -38px;
 }
 .par1{
   float: left;
@@ -60,6 +60,16 @@
   border-radius: 5px;
   box-shadow: 0 1px 2px 0 #bcc1c8;
   background-color:#ffffff;
+  float: left;
+}
+.foto_img {
+  width: 380px;
+  height: 421px;
+  margin-left: 0px;
+  margin-top:0px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color:#9c7474;
   float: left;
 }
 .text2{ 
