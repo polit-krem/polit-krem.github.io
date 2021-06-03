@@ -25,14 +25,15 @@
   </div></header>
 <div class="golova" id="date_Nam">
   
-     <div class="Name_background">
-      <h1 class="text1">Іванов Іван Іванович</h1>
+     <div class="Name_background" id="text">
       <img src="IMG/pic-teacher-item.png"
      class="Pic_pupil_item">
      </div>
-<div class="foto">
-  <center>
-  <h3 class="text2">Фото</h3></center>
+<div class="foto" id="foto">
+    <div class="foto_img">
+        <center>
+        <h3 class="text2">Фото</h3></center>
+    </div>
 </div> 
                 <div class="Rectangle_One">
                     <div class="Path">
@@ -180,6 +181,32 @@
                 })
             })
         });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.photo)
+                    const name = document.createElement("p");
+                    name.className = "text1";
+                    name.innerHTML =  data.surname + " " + data.name + " " + data.patronymic ;
+                    document.querySelector('#text').appendChild(name);
+                    
+                })
+            })
+        });
+        /*window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.photo)
+                    const photo = document.createElement("p");
+                    photo.className = "text1";
+                    document.getElementById("photo_img").style.scr = data.photo;
+                    document.querySelector('#photo').appendChild(photo);
+                    
+                })
+            })
+        });*/
   </script>
 </body>
 </html>
