@@ -68,17 +68,17 @@ a{
 .divgrtabl1{
   width: 940px;
   height: 62px;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
-  margin-top: 40px;
+  border-bottom: 1px solid #bcc1c8;
+  background-color: white;
+ 
 }
 .divgrtabl2{
-  padding: 10px 0 0;
+  
   width: 940px;
   height: 62px;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
-  display: inline-block;
+  border-bottom: 1px solid #bcc1c8;
+  
+  background-color: white;
 }
 .divgrtabl2:hover{
   background-color: #f4f5f6;
@@ -88,12 +88,11 @@ a{
   display: inline-block;
 }
 .divgrtabl3{
-  padding: 10px 0 0;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
+  border-bottom: 1px solid #bcc1c8;
   width: 940px;
   height: 62px;
-  display: inline-block;
+  
+  background-color: white;
 }
 .divgrtabl3:hover{
   background-color: #f4f5f6;
@@ -103,12 +102,11 @@ a{
   display: inline-block;
 }
 .divgrtabl4{
-  padding: 10px 0 0;
   width: 940px;
   height: 62px;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
-  display: inline-block;
+  border-bottom: 1px solid #bcc1c8;
+  
+  background-color: white;
 }
 .divgrtabl4:hover{
   background-color: #f4f5f6;
@@ -120,10 +118,9 @@ a{
 .divgrtabl5{
   width: 940px;
   height: 62px;
-  padding: 10px 0 0;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
-   display: inline-block;
+border-bottom: 1px solid #bcc1c8;
+   
+   background-color: white;
 }
 .divgrtabl5:hover{
   background-color: #f4f5f6;
@@ -135,10 +132,11 @@ a{
 .divgrtabl6{
   width: 940px;
   height: 62px;
- padding: 10px 0 0;
- border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8; display: inline-block;
-  margin-bottom: 276px;
+
+  border-bottom: 1px solid #bcc1c8;
+  
+  margin-bottom: 236px;
+  background-color: white;
 }
 .divgrtabl6:hover{
   cursor: pointer;
@@ -163,6 +161,7 @@ a{
 }
 .imggr{
   float: right;
+  margin-top: 10px;
 }
 .imggr:hover{
   cursor: pointer;
@@ -187,48 +186,48 @@ a{
 }
 .polos1{
   width: 5px;
-  height: 72px;
+  height: 64px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -1px;
   margin-left: -1400px;
   display: none;
 }
 .polos2{
   width: 5px;
-  height: 72px;
+  height: 63px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
+  margin-top: -1px;
   margin-left: -1400px;
   display: none;
 }
 .polos3{
   width: 5px;
-  height: 72px;
+  height: 63px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
-  display: none;
+  margin-top: -1px;
   margin-left: -1400px;
+  display: none;
 }
 .polos4{
   width: 5px;
-  height: 72px;
+  height: 63px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
-  display: none;
+  margin-top: -1px;
   margin-left: -1400px;
+  display: none;
 }
 .polos5{
   width: 5px;
-  height: 72px;
+  height: 63px;
   background-color: #e8b32e;
   display: inline-block;
-  margin-top: -10px;
-  display: none;
+  margin-top: -1px;
   margin-left: -1400px;
+  display: none;
 }
 .pargrgl{
   text-align: center;
@@ -239,4 +238,36 @@ a{
   margin-bottom: 7px;
   margin-left: 40px;
   margin-right: 122px;
+}
+.search{
+  width: 960px;
+  height: 50px;
+  margin: 40px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+}
+.search_icon{
+  width: 23px;
+  height: 23px;
+}
+.search_white_48dp {
+  width: 32px;
+  height: 32px;
+  margin: 9px 20px 9px -880px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.search_input_div{
+  width: 70px;
+  height: 20px;
+  margin: -10px 20px 9px -750px;
+}
+.search_input{
+  width: 667px;
+  height: 20px;
+  font-family: AvenirNextCyr;
+  font-size: 16px;
+  color: #bcc1c8;
+  border: 1px solid #ffffff;
 }
