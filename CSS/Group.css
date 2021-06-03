@@ -146,19 +146,29 @@ a{
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 63px;
+  width: 40px;
 }
 .pargr5{
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-right: 150px;
+  margin-right: 20px;
+  margin-left: 157px;
+  width: 235px;
+  height: 22px;
+  text-align: left;
 }
 .pargr6{
+  width: 21px;
+  height: 22px;
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
+  margin-left:200px; 
+  text-align: left;
+
 }
 .polos{
   width: 5px;
