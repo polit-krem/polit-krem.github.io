@@ -21,7 +21,6 @@ body{
   }
   .inpgrkn{
     background: url(IMG/search-white-48-dp.svg) no-repeat 50% 50%;
-    float: left;
     height: 32px;
     width: 42px;
     border: none;
@@ -121,6 +120,7 @@ body{
     display: flex;
     flex-direction: row;
     background-color: #ffffff;
+    border-bottom: 1px solid #bcc1c8;
   }
   .foto{
     width: 46px;
@@ -148,18 +148,14 @@ body{
     letter-spacing: normal;
     color: #25282d;
   }
-  
-  .strip{
-    width: 960px;
-    height: 1px;
-    background-color: #bcc1c8;
-  }
   .student_information{
     width: 960px;
     height: 62px;
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+    border-bottom: 1px solid #bcc1c8;
   }
   .vertical_stripe{
     background-color: #ffffff;
@@ -184,9 +180,9 @@ body{
     margin: 7px 40px 7px 48px;
   }
   .pib_student{
-    width: 210px;
+    width: 300px;
     height: 22px;
-    margin: 19px 450px 13px 70px;
+    margin: 19px 360px 13px 80px;
     font-family: AvenirNextCyr;
     font-size: 18px;
     font-weight: normal;
@@ -195,6 +191,7 @@ body{
     line-height: normal;
     letter-spacing: normal;
     color: #25282d;
+    text-align: left;
   }
   .icon_student{
     width: 20px;
