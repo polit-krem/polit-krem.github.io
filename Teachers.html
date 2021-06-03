@@ -28,65 +28,40 @@
                 <input type="text" placeholder="Пошук…" class="search_input">
             </div>
         </div>
-        <div class="Three_Main">
+        <div class="Three_Main"  id="api-fetch">
             <div class="fio">
                 <p class="foto">Фото</p>
                 <p class="pib">ПІБ</p>
             </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
-            <div class="strip"></div>
-            <div class="student_information">
-                    <div class="vertical_stripe"></div>
-                    <img src="IMG/avatar.png" srcset="avatar@2x.png 2x, avatar@3x.png 3x" class="Avatar">
-                    <p class="pib_student">Петров Петро Петрович</p>
-                    <div class="icon_student">
-                        <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
-                    </div>
-            </div>
+            
         </div>
     </div>
 </center>
-	<center><footer>
+	<center><footer style="margin-top: 171px; ">
 		<p><img src="IMG/logo.png" class="imgfoot"></p>
 		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 	</footer></center>
-
-
     <script>
-
-window.addEventListener("load", async function() {
+        window.addEventListener("load", async function() {
         fetch("https://alexmarchukprod.com.ua/groups")
             .then((result) => {
                 result.json().then((data) => {
                     data.forEach((item) => {
                         const output = document.createElement("div");
-                        output.className = "list-group-item"
-                        output.innerHTML = `Group ${item.title},
-                            form master - ${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}`;
-                        document.querySelector('#api-fetch').appendChild(output)
+                        const strip_id = document.createElement("div");
+                        output.className = "student_information";
+                        output.innerHTML = `
+                                            <div class="vertical_stripe"></div>
+                                            <img class="Avatar" src="IMG/avatar.png">
+                                            <p class="pib_student">${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
+                                            <div class="icon_student">
+                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
+                                            </div>`;
+                        document.querySelector('#api-fetch').appendChild(output);
                     })
                 })
             })
     });
-
-
 
     </script>
 </body>
