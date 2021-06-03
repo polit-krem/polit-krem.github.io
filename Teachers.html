@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="CSS/Header.css">
 	<link rel="stylesheet" href="CSS/Teachers.css">
 	<title>Довідник наукового ліцею «Політ»</title>
+    <script src="Teacher_item.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 	<header><div class="up">
@@ -48,21 +50,35 @@
                 result.json().then((data) => {
                     data.forEach((item) => {
                         const output = document.createElement("div");
-                        const strip_id = document.createElement("div");
                         output.className = "student_information";
                         output.innerHTML = `
                                             <div class="vertical_stripe"></div>
                                             <img class="Avatar" src="IMG/avatar.png">
-                                            <p class="pib_student">${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
+                                            <p class="pib_student" >${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
                                             <div class="icon_student">
-                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
+                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp" onclick="go();" value="${item.formMaster.id}"> 
                                             </div>`;
                         document.querySelector('#api-fetch').appendChild(output);
                     })
                 })
             })
-    });
-
+        });
+        function go(){
+            window.location.href = 'Teacher_item.html';
+        }
+        var id_user = $(this).attr("value");
+        window.addEventListener("load", async function() {
+        fetch("https://alexmarchukprod.com.ua/teacher/?id=${id_user}")
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((item) => {
+                        $('#date_nam').text(item.rank);
+                    })
+                })
+            })
+        });
+        console.log(id_user);
     </script>
+       
 </body>
 </html>
