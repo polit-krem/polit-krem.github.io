@@ -20,6 +20,7 @@
   color: #212121;
   margin-bottom: 40px;
 }
+
 .One_Main{
   display: flex;
   flex-direction: row;
@@ -62,7 +63,7 @@
   color: #40464f;
 }
 .teacher_name{
-  width: 204px;
+  width: 300px;
   height: 25px;
   margin: 20px 129px 5px 30px;
   font-family: AvenirNextCyr;
@@ -80,6 +81,17 @@
   object-fit: contain;
   transform: rotate(360deg);
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+.expand_more_white_48dp1 {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transform: rotate(360deg);
+  cursor: pointer;
+  margin-left: -40px;
+  margin-top: -5px;
 }
 .icon{
   width: 20px;
@@ -150,7 +162,7 @@
   color: #40464f;
 }
 .profile_name{
-  width: 220px;
+  width: 270px;
   height: 25px;
   margin: 20px 37px 5px 30px;
   font-family: AvenirNextCyr;
@@ -174,11 +186,13 @@
 .subject{
   width:335px;
   margin-left: 137px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .subject_education{
   width: 335px;
   height: 22px;
-  margin: 0 0 8px 30px;
+  margin: 0 0 8px 26px;
   font-family: AvenirNextCyr;
   font-size: 18px;
   font-weight: normal;
@@ -189,9 +203,9 @@
   color: #40464f;
 }
 .subject_name{
-  width: 108px;
+  width: 380px;
   height: 25px;
-  margin: 10px 227px 10px 30px;
+  margin: 10px 227px 10px 26px;
   font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
@@ -200,6 +214,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
+  word-wrap:  break-word ;
 }
 .text_snippet_black_48dp  {
   width: 77px;
@@ -284,6 +299,8 @@
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
+  
+  border-bottom: 1px solid #bcc1c8;
 }
 .foto{
   width: 46px;
@@ -312,17 +329,14 @@
   color: #25282d;
 }
 
-.strip{
-  width: 960px;
-  height: 1px;
-  background-color: #bcc1c8;
-}
 .student_information{
   width: 960px;
   height: 62px;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+  border-bottom: 1px solid #bcc1c8;
 }
 .vertical_stripe{
   background-color: #ffffff;
@@ -347,9 +361,10 @@
   margin: 7px 40px;
 }
 .pib_student{
-  width: 210px;
+  width: 450px;
   height: 22px;
-  margin: 19px 450px 13px 88px;
+  padding-right: 100px;
+  margin: 19px 300px 13px 88px;
   font-family: AvenirNextCyr;
   font-size: 18px;
   font-weight: normal;
