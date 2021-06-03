@@ -36,7 +36,7 @@
 							<input type="text" placeholder="Пошук…" class="search_input">
 						</div>
 					</div>
-		<div class="divgrtablgl">
+		<div class="divgrtablgl" id="api-fetch">
 			<div class="divselgr">
 				<p class="parselgr">Сортувати за:   
 					<div class="select">
@@ -49,44 +49,11 @@
 					</div>
 				</p>
 			</div>
-				<div class="divgrtabl1">
-					<p class="pargr1">Назва групи</p>
-					<p class="pargr3">ПІБ класного керівника</p>
-					<p class="pargr3">Кількість учнів</p>
-				</div>
-				<div class="divgrtabl"><div class="polos"></div>
-					<p class="pargr4">Приклад назви групи</p>
-					<p class="pargr5">Іванов Іван Іванович</p>
-					<p class="pargr6">20</p>
-					<img src="IMG/expand-more-white-48-dp.svg" class="imggr">
-				</div>
-				<div class="divgrtabl"><div class="polos"></div>
-					<p class="pargr4">Приклад назви групи</p>
-					<p class="pargr5">Іванов Іван Іванович</p>
-					<p class="pargr6">20</p>
-					<img src="IMG/expand-more-white-48-dp.svg" class="imggr">
-				</div>
-				<div class="divgrtabl">
-					<div class="polos"></div>
-					<p class="pargr4">Приклад назви групи</p>
-					<p class="pargr5">Іванов Іван Іванович</p>
-					<p class="pargr6">20</p>
-					<img src="IMG/expand-more-white-48-dp.svg" class="imggr">
-				</div>
-				<div class="divgrtabl">
-					<div class="polos"></div>
-					<p class="pargr4">Приклад назви групи</p>
-					<p class="pargr5">Іванов Іван Іванович</p>
-					<p class="pargr6">18</p>
-					<img src="IMG/expand-more-white-48-dp.svg" class="imggr">
-				</div>
-				<div class="divgrtabl" >
-					<div class="polos"></div>
-					<p class="pargr4">Приклад назви групи</p>
-					<p class="pargr5">Іванов Іван Іванович</p>
-					<p class="pargr6">19</p>
-					<img src="IMG/expand-more-white-48-dp.svg" class="imggr">
-				</div>
+			<div class="divgrtabl1">
+				<p class="pargr1">Назва групи</p>
+				<p class="pargr2">ПІБ класного керівника</p>
+				<p class="pargr3">Кількість учнів</p>
+			</div>
 		</div>
 	</div>
 
@@ -97,4 +64,23 @@
 	</footer></center>
 
 </body>
+<script >
+       window.addEventListener("load", async function() {
+        fetch("https://alexmarchukprod.com.ua/groups")
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((item) => {
+                        const output = document.createElement("div");
+                        output.className = "divgrtabl";
+                        output.innerHTML = `
+                        				<p class="pargr4">${item.title}</p>
+                                        <p class="pargr5">${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
+                                        <p class="pargr6">  ${item.students.length} </p>
+                                        <img src="IMG/expand-more-white-48-dp.svg" class="imggr">`;
+                        document.querySelector('#api-fetch').appendChild(output);
+                    })
+                })
+            })
+    });
+</script>
 </html>
