@@ -91,7 +91,8 @@
   transform: rotate(360deg);
   cursor: pointer;
   margin-left: -40px;
-  margin-top: -5px;
+  margin-bottom: -10px;
+  
 }
 .icon{
   width: 20px;
