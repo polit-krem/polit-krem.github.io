@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
-	<title>Kucherenko</title>
+<link rel="stylesheet" href="CSS/Header.css">
+<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
+	<title>«Довідник наукового ліцею «Політ»</title>
 </head>
 <style>
 	.west_black_48dp {
@@ -20,7 +22,6 @@
   height: 330px;
 }
 .restar{
-	
   height: 22px;
   margin: 0 0 0 10px;
   font-size: 18px;
@@ -40,7 +41,6 @@
  font-family: 'Ledger', serif;
   font-size: 36px;
   color: #ffffff;
-  padding-top: 40px;
   padding-left: 30px;
 }
 .Pic_pupil_item {
@@ -50,25 +50,7 @@
   margin-left: 559px;
   margin-top: -404px;
 }
-.up{
-  width: 101.3%;
-  background-color: #40464f;
-  height: 62px;
-  margin-left: -8px;
-  margin-top: -8px;
-}
-.par{	
-	float: left;
-	margin-right: 10%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	color: #ffffff;
-	font-size: 16px;
-}
-.par:hover{
-	color: #e8b32e;
-	text-decoration: underline;
-}
+
 .par1{
 	float: left;
 	margin-right: 10%;
@@ -262,9 +244,10 @@ margin: 30px 0 20px 30px;
   letter-spacing: normal;
   color: #40464f;
 float: left;}
-.Favourite_name{  width: 220px;
-  height: 25px;
-   margin: 2px 129px 5px 30px;
+.Favourite_name{  
+  width: 300px;
+  height: 45px;
+   margin: -10px 0px 5px 30px;
   font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
@@ -273,7 +256,9 @@ float: left;}
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
-float: left;}
+float: left;
+  overflow: auto;
+}
 .prosebe_name{
   width:335px;
   height: 22px;
@@ -288,7 +273,7 @@ float: left;}
   color: #40464f;
 }
 .prosebe_text{ 
-  width: 800px;
+  width: 750px;
   height: 25px;
   margin: 2px 129px 5px 30px;
   font-family: AvenirNextCyr;
@@ -311,6 +296,21 @@ width: 800px;
   height: 25px;
   margin: 30px 0 20px 30px;
   font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #40464f;
+}
+.subject_name{
+  margin: 2px 129px 5px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  height: auto;
+  font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
   font-stretch: normal;
@@ -319,51 +319,110 @@ width: 800px;
   letter-spacing: normal;
   color: #25282d;
 }
-.subject_name{
-  margin: 2px 129px 5px 30px;
-  display: flex;
-  flex-direction: column;
-  width: 840px;
-  height: auto;
+a{
+    color: #e8b32e;
+    text-decoration: none;
 }
-.copy{margin: 0;
-  text-align: center;
-  font-size: 10px;
-  color: #9aa2ac;
-  margin-bottom: 15px;
+.copy{
+	font-size: 10px;
+	color: #9aa2ac;
+	margin-bottom: 15px;
 }
 footer{
-  height: 110px;
-  width: 101.3%;
-  margin-top: -8px;
-  margin-bottom: -8px;
-  margin-left: -8px;
-  background-color: #40464f;
+    margin-top: 1000px;
+	height: 110px;
+	width: 100%;
+	background-color: #40464f;
+
 }
 .imgfoot{
-  margin-top: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 html{
-  overflow-x: hidden;
+	overflow-x: hidden;
+}
+*{
+	margin: 0px;
+    padding:0px ;
+}
+body{
+	background-color: #f4f5f6;
+
+}
+.interesting_education{
+    margin-top: 30px;
+    font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #40464f;
+}
+.interesting_name1{
+    margin-top:20px ;
+}
+.interesting_name2{
+    margin-top:20px ;
+    width: 300px;
+    font-family: AvenirNextCyr;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+  height: 100px;
+  overflow: auto;
+}
+.achievement_education{
+    margin-top: 30px;
+    font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #40464f;
+}
+.achievement_name1{
+    margin-top:20px ;
+}
+.achievement_name2{
+    margin-top:15px ;
+    font-family: AvenirNextCyr;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+  height: 100px;
+  overflow: auto;
 }
 </style>
 <body>
 	<header><div class="up">
-		<img src="logo.png" alt="" style="float: left; margin:  10px 10px 17px 15px;">
-		<p class="par1">Довідник наукового ліцею «Політ»</p>
-		<p class="par">Головна</p>
-		<p class="par">Групи</p>
-		<p class="par">Учителі</p>
-		<p class="par">Контакти</p>
-	</div></header>
+    <a href="index.html" class="alogo"><img src="IMG/logo.png" class="imgh"></a>
+    <p class="par" id="par1">Довідник наукового ліцею «Політ»</p>
+    <a href="index.html"><p class="par">Головна</p></a>
+    <a href="Groups.html"><p class="par" class="pargr">Групи</p></a>
+    <a href="Teachers.html"><p class="par">Учителі</p></a>
+    <a href="Contacts.html"><p class="par">Контакти</p></a>
+  </div></header>
 <div class="golova">
-  <p class="parag">
-	<img src="west-black-48-dp.svg"
+  <p class="parag"><a href="Groups1.html">
+	<img src="west-black-48-dp (2).svg"
      class="west_black_48dp">
      <h3 class="restar">Повернутися до групи</h3>
     </p>
-     <div class="Name_background">
-     	<h1 class="text1">Петров Петро Петрович</h1>
+</a>
+     <div class="Name_background" id="text">
      	<img src="pic-pupil-item.png"
      class="Pic_pupil_item">
      </div>
@@ -375,72 +434,178 @@ html{
                     <div class="Path">
                         <img src="cake-black-48-dp.svg" class="self_improvement_black_48dp">
                     </div>
-                <div class="date">
+                <div class="date" id="data_Nam">
                     <h1 class="date_p">Дата народження</h1>
-                    <h2 class="date_name" id="date_nam">01.01.1998</h2>
+                    
                 </div>
                 </div>
                 <div class="Rectangle_Two">
                     <div class="Path">
                         <img src="email-black-48-dp.svg" class="group_black_48dp">
                     </div>
-                    <div class="email">
+                    <div class="email" id="email_ex">
                         <p class="email_name">Електронна пошта</p>
-                        <p class="email_ex" id="email_ex">example@example.com</p>
                     </div>
                 </div>
                 <div class="Rectangle_Three">
                     <div class="Path">
                         <img src="thumb-up-alt-black-48-dp.svg" class="school_black_48dp">
                     </div>
-                    <div class="Favourite">
+                    <div class="Favourite" id="Favourite_name">
                         <p class="Favourite_course">Улюблений предмет</p>
-                        <p class="Favourite_name">Фізкультура</p>
                     </div>
                 </div>
                 <div class="Rectangle_Four">
                     <div class="Path">
                         <img src="text-snippet-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
-                    <div class="prosebe">
+                    <div class="prosebe" id="prosebe_text">
                         <p class="prosebe_name">Короткий опис про себе</p>
-                        <p class="prosebe_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
                     </div>
                 </div>
                   <div class="Rectangle_Five">
                     <div class="Path">
                         <img src="school-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
-                    <div class="subject">
+                    <div class="subject" id="subject_name">
                         <p class="subject_education">Школа олімпійського резерву</p>
-                        <p class="subject_name">Факультатив 1</p>
-                        <p class="subject_name">Факультатив 2</p>
                     </div>
-                  </div>
-                     <div class="Rectangle_Six">
-                    <div class="Path">
-                        <img src="sentiment-satisfied-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
-                    <div class="interesting">
-                        <p class="interesting_education">Школа олімпійського резерву</p>
-                        <p class="interesting_name">Назва 1</p>
-                        <p class="interesting_name">Назва 2</p>
-                        <p class="interesting_name">Назва 3</p>
-                    </div>
-                  </div>
-                     <div class="Rectangle_Seven">
-                    <div class="Path">
-                        <img src="workspace-premium-black-48-dp.svg" class="text_snippet_black_48dp">
-                    </div>
-                    <div class="achievement">
-                        <p class="achievement_education">Школа олімпійського резерву</p>
-                        <p class="achievement_name">Назва 1</p>
-                        <p class="achievement_name">Назва 2</p>
-                        <p class="achievement_name">Назва 3</p>
-                    </div>
-                  </div>
-
+                    <div class="Rectangle_Six">
+                        <div class="Path">
+                            <img src="sentiment-satisfied-black-48-dp.svg" class="text_snippet_black_48dp">
+                        </div>
+                        <div class="interesting" id="interesting_name2">
+                            <p class="interesting_education">Список інтересів</p>
+                            
+                        </div>
+                      </div>
+                         <div class="Rectangle_Seven">
+                        <div class="Path">
+                            <img src="workspace-premium-black-48-dp.svg" class="text_snippet_black_48dp">
+                        </div>
+                        <div class="achievement" id="achievement_name2">
+                            <p class="achievement_education">Досягнення</p>
+                            
+                        </div>
+                      </div>
 </div>
-
+<center><footer>
+    <p><img src="IMG/logo.png" class="imgfoot"></p>
+    <p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
+</footer></center>
+<script>
+  var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+    var new_url = "https://alexmarchukprod.com.ua/student?id=" + c;
+    window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.rank)
+                    const rank_p = document.createElement("p");
+                    rank_p.className = "date_name";
+                    rank_p.innerHTML = data.birthday;
+                    document.querySelector('#data_Nam').appendChild(rank_p);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.group.title)
+                    const email_ex = document.createElement("p");
+                    email_ex.className = "email_ex";
+                    email_ex.innerHTML = data.email;
+                    document.querySelector('#email_ex').appendChild(email_ex);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.subjects)
+                    const Favourite_name = document.createElement("p");
+                    Favourite_name.className = "Favourite_name";
+                    Favourite_name.innerHTML = data.favoriteSubject;
+                    document.querySelector('#Favourite_name').appendChild(Favourite_name);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.olympicReserve)
+                    const prosebe_text = document.createElement("p");
+                    prosebe_text.className = "prosebe_text";
+                    prosebe_text.innerHTML = data.description;document.querySelector('#prosebe_text').appendChild(prosebe_text);
+                    
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.groups)
+                    const subject_name = document.createElement("p");
+                    subject_name.className = "subject_name";
+                    subject_name.innerHTML = data.olympicReserve;
+                    document.querySelector('#subject_name').appendChild(subject_name);
+                    if(data.olympicReserve === null || data.olympicReserve === " " || data.olympicReserve.length == 0){
+                      subject_name.innerHTML = "Немає";
+                      document.querySelector('#subject_name').appendChild(subject_name);
+                    }
+                })
+            })
+        });
+        
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.achievements)
+                    const interesting_name2 = document.createElement("p");
+                    interesting_name2.className = "interesting_name2";
+                    interesting_name2.innerHTML = data.interests;
+                    document.querySelector('#interesting_name2').appendChild(interesting_name2);
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.photo)
+                    const name = document.createElement("p");
+                    name.className = "text1";
+                    name.innerHTML =  data.surname + " " + data.name + " " + data.patronymic ;
+                    document.querySelector('#text').appendChild(name);
+                    
+                })
+            })
+        });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.photo)
+                    const achievement_name2 = document.createElement("p");
+                    achievement_name2.className = "achievement_name2";
+                    achievement_name2.innerHTML =  data.achievements  ;
+                    document.querySelector('#achievement_name2').appendChild(achievement_name2);
+                    if(data.achievements === null || data.achievements === " " || data.achievements.length == 0){
+                      achievement_name2.innerHTML = "Немає";
+                      document.querySelector('#achievement_name2').appendChild(achievement_name2);
+                    }
+                })
+            })
+        });
+</script>
 </body>
 </html>
