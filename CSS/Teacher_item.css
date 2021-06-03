@@ -154,10 +154,16 @@ body{
   margin:60px 30px;
   float: left;
 }
+.date{
+  width: 204px;
+  height: 50px;
+  display:flex;
+  flex-direction: column;
+}
 .date_p{
   width: 153px;
   height: 22px;
-  margin: 30px 0 20px 30px;
+  margin: 30px 0 15px 30px;
   font-family: AvenirNextCyr;
   font-size: 18px;
   font-weight: normal;
@@ -169,10 +175,10 @@ body{
   float: left;
 }
 .date_name{
-  width: 204px;
+  width: 264px;
   height: 25px;
   margin: 2px 129px 5px 30px;
-  font-family: AvenirNextCyr;
+  Font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
   font-stretch: normal;
@@ -180,11 +186,10 @@ body{
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
-  float: left;
 }
 .email_name{
   width: 223px;
-  margin: 30px 0 20px 30px;
+  margin: 30px 0 15px 30px;
   font-family: AvenirNextCyr;
   font-size: 18px;
   font-weight: normal;
@@ -194,11 +199,12 @@ body{
   letter-spacing: normal;
   color: #40464f;
   float: left;
+  text-align: left;
 }
 .email_ex{
   width: 200px;
   height: 25px;
-  margin: 2px 129px 5px 30px;
+  margin: 2px 129px 5px 15px;
   font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
@@ -208,10 +214,12 @@ body{
   letter-spacing: normal;
   color: #25282d;
   float: left;
+  text-align: left;
 }
-.Favourite_course{ width: 257px;
+.Favourite_course{ 
+  width: 257px;
   height: 22px;
-margin: 30px 0 20px 30px;
+  margin: 30px 0 15px 30px;
   font-family: AvenirNextCyr;
   font-size: 18px;
   font-weight: normal;
@@ -220,25 +228,27 @@ margin: 30px 0 20px 30px;
   line-height: normal;
   letter-spacing: normal;
   color: #40464f;
-float: left;}
-.Favourite_name{  width: 220px;
+  float: left;
+}
+.Favourite_name{  
+  width: 220px;
   height: 25px;
   width: 230px;
-   margin: 2px 129px 5px 30px;
-  font-family: AvenirNextCyr;
-  font-size: 16px;
+  margin: 2px 129px 5px 30px;
+  font-family: AvenirNextCyr;  
+  font-size: 21px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
-float: left;}
-
+  float: left;
+}
 .subject_education{
-width: 800px;
+  width: 800px;
   height: 25px;
-  margin: 30px 0 20px 30px;
+  margin: 35px 0 20px 30px;
   font-family: AvenirNextCyr;
   font-size: 21px;
   font-weight: normal;
@@ -254,22 +264,79 @@ width: 800px;
   flex-direction: column;
   width: 840px;
   height: auto;
+  font-size: 21px;
 }
 .interesting_education{
     margin-top: 30px;
+    font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #40464f;
 }
 .interesting_name1{
     margin-top:15px ;
 }
 .interesting_name2{
-    margin-top:10px ;
+    margin-top:20px ;
+    margin-left: 137px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: AvenirNextCyr;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
 }
 .achievement_education{
     margin-top: 30px;
+    font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #40464f;
 }
 .achievement_name1{
     margin-top:15px ;
 }
 .achievement_name2{
     margin-top:10px ;
+    font-family: AvenirNextCyr;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+}
+.table{
+  width: 300px;
+  height: 95px;
+  border: 1px solid black;
+  margin: 20px 0 0 137px ;
+  display: flex;
+  flex-direction: row;
+}
+.td{
+  width: 73px;
+  height: 95px;
+  border: 1px solid black;
+}
+.th{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 73px;
+  height: 25px;
+  border: 1px solid black;
 }
