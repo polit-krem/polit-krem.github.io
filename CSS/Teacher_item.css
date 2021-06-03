@@ -34,11 +34,11 @@
   padding-left: 30px;
 }
 .Pic_pupil_item {
-  width: 380px;
-  height: 200px;
+  width: 450px;
+  height: 167px;
   object-fit: contain;
-  margin-left: 559px;
-  margin-top: -404px;
+  margin-left: 489px;
+  margin-top: -128px;
 }
 .par1{
   float: left;
@@ -107,18 +107,6 @@ body{
   box-shadow: 0 1px 2px 0 #bcc1c8;
   background-color: #ffffff;
   float: right;
-}
-.Rectangle_Four {
-  width: 950px;
-  height: 197px;
-  margin-left: -10px;
-  margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #bcc1c8;
-  background-color: #ffffff;
-  float: right;
-  display: flex;
-  flex-direction: row;
 }
 .Rectangle_Five{
   width: 950px;
@@ -208,7 +196,7 @@ body{
   float: left;
 }
 .email_ex{
-  width: 25px;
+  width: 200px;
   height: 25px;
   margin: 2px 129px 5px 30px;
   font-family: AvenirNextCyr;
@@ -235,9 +223,10 @@ margin: 30px 0 20px 30px;
 float: left;}
 .Favourite_name{  width: 220px;
   height: 25px;
+  width: 230px;
    margin: 2px 129px 5px 30px;
   font-family: AvenirNextCyr;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -245,38 +234,7 @@ float: left;}
   letter-spacing: normal;
   color: #25282d;
 float: left;}
-.prosebe_name{
-  width:335px;
-  height: 22px;
-  margin: 30px 0 20px 30px;
-  font-family: AvenirNextCyr;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #40464f;
-}
-.prosebe_text{ 
-  width: 800px;
-  height: 25px;
-  margin: 2px 129px 5px 30px;
-  font-family: AvenirNextCyr;
-  font-size: 21px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #25282d;
-}
-.prosebe{
-  display: flex;
-  flex-direction: column;
-  width: 840px;
-  height: auto;
-}
+
 .subject_education{
 width: 800px;
   height: 25px;
@@ -296,4 +254,22 @@ width: 800px;
   flex-direction: column;
   width: 840px;
   height: auto;
+}
+.interesting_education{
+    margin-top: 30px;
+}
+.interesting_name1{
+    margin-top:15px ;
+}
+.interesting_name2{
+    margin-top:10px ;
+}
+.achievement_education{
+    margin-top: 30px;
+}
+.achievement_name1{
+    margin-top:15px ;
+}
+.achievement_name2{
+    margin-top:10px ;
 }
