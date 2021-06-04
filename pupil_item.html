@@ -74,6 +74,25 @@
   background-color:#ffffff;
   float: left;
 }
+.foto2 {
+  width: auto;
+  height: 421px;
+  margin-left: 10px;
+  margin-top:-110px;
+  border-radius: 5px;
+  float: left;
+}
+.foto1 {
+  width: auto;
+  height: 421px;
+  margin-left: 10px;
+  margin-top:-112px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color:#ffffff;
+  float: left;
+  z-index: 1000;
+}
 .text2{ 
   width: 53px;
   height: 25px;
@@ -86,6 +105,7 @@
   letter-spacing: normal;
   color: #25282d;
   padding-top: 198px;
+  z-index: 1;
 }
 body{
   background-color: #f4f5f6;
@@ -417,19 +437,22 @@ body{
     <a href="Contacts.html"><p class="par">Контакти</p></a>
   </div></header>
 <div class="golova">
-  <p class="parag"><a href="Groups1.html">
+  <p class="parag"><a href="Groups.html" id="goBack" onclick="javascript:history.go(-1)">  
 	<img src="west-black-48-dp.svg"
      class="west_black_48dp">
      <h3 class="restar">Повернутися до групи</h3>
+     <span id="
+     result"></span>
     </p>
 </a>
      <div class="Name_background" id="text">
      	<img src="pic-pupil-item.png"
      class="Pic_pupil_item">
      </div>
-<div class="foto">
+<div class="foto" id="foto1">
   <center>
-  <h3 class="text2">Фото</h3></center>
+  <h3 class="text2" id="text2">Фото</h3></center>
+  
 </div> 
                 <div class="Rectangle_One">
                     <div class="Path">
@@ -607,6 +630,27 @@ body{
                 })
             })
         });
+        window.addEventListener("load", async function() {
+        fetch(new_url)
+            .then((result) => {
+                result.json().then((data) => {
+                	console.log(data.photo)
+                    const foto1 = document.createElement("div");
+                    foto1.className = "foto2";
+                    foto1.innerHTML = `<img src="${data.photo}" class="foto1">` ;
+                    document.querySelector('#foto1').appendChild(foto1);
+                    if(data.photo === null || data.photo === " " || data.photo.length == 0){
+                      foto1.innerHTML = "Немає";
+                      document.querySelector('#foto1').appendChild(foto1);
+                    }
+                })
+            })
+        });
+        document.getElementById("goBack").addEventListener("click", function(event){
+        event.preventDefault();
+        document.getElementById("result").innerHTML = "Going back";
+        window.history.back();
+});
 </script>
 </body>
 </html>
