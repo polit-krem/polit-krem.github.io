@@ -1,4 +1,3 @@
-
 body{
   background-color: #f4f5f6;
   
@@ -24,6 +23,7 @@ a{
 }
 .inpgrkn{
   background: url(IMG/search-white-48-dp.svg) no-repeat 50% 50%;
+  float: left;
   height: 32px;
   width: 42px;
   border: none;
@@ -42,7 +42,7 @@ a{
   width: 244px;
   height: 18px;
   margin: 13px 67px 1px 0;
-  font-family: AvenirNextCyr;
+  font-family: 'Avenir Next Cyr';
   font-size: 14px;
   color: #5c6470;
   float: right;
@@ -71,12 +71,12 @@ a{
   width: 130px; 
   padding: 0 10px 0 0;
   text-indent: 0.01px; 
-  margin-bottom: 3px; 
+  margin-bottom: 0px; 
   color: #25282d;
   margin-left: 20px;
   cursor: pointer;
   z-index: 1000;
-  font-family: AvenirNextCyr;
+  font-family: 'Avenir Next Cyr';
 }
 .divselgr{
   width: 958px;
@@ -117,7 +117,7 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 40px;
-  font-family: AvenirNextCyr;
+  font-family: 'Avenir Next Cyr';
   font-weight: bold;
 }
 .pargr2{
@@ -125,9 +125,9 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 175px;
-  font-family: AvenirNextCyr;
   margin-right: 116px;
   font-weight: bold;
+  font-family: 'Avenir Next Cyr';
 }
 .pargr3{
   float: left;
@@ -135,7 +135,7 @@ a{
   margin-top: 20px;
   margin-left: 116px;
   font-weight: bold; 
-  font-family: AvenirNextCyr;
+  font-family: 'Avenir Next Cyr';
 }
 .imggr{
   float: right;
@@ -149,39 +149,21 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 40px;
-  font-family: AvenirNextCyr;
   margin-right: 63px;
-  width: 40px;
+  font-family: 'Avenir Next Cyr';
 }
 .pargr5{
   float: left;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-right: 20px;
-  font-family: AvenirNextCyr;
-  margin-left: 165px;
-  width: 300px;
-  height: 22px;
-  text-align: left;
+  margin-right: 150px;
+  font-family: 'Avenir Next Cyr';
 }
 .pargr6{
-  width: 21px;
-  height: 22px;
   float: left;
-  font-family: AvenirNextCyr;
   margin-bottom: 20px;
+  font-family: 'Avenir Next Cyr';
   margin-top: 20px;
-  margin-left:100px; 
-  text-align: left;
-
-}
-.pargr6:nth-child(1){
-  width: 21px;
-  height: 22px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 80px; 
-
 }
 .polos{
   width: 5px;
@@ -193,6 +175,7 @@ a{
 }
 .pargrgl{
   text-align: center;
+
 }
 .search{
   width: 964px;
