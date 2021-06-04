@@ -75,7 +75,7 @@ a{
   margin-left: 20px;
   cursor: pointer;
   z-index: 1000;
-  font-family: AvenirNextCyr;
+    font-family: AvenirNextCyr;
 }
 .divselgr{
   width: 958px;
@@ -116,7 +116,7 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 40px;
-  font-family: AvenirNextCyr;
+   font-family: AvenirNextCyr;
   font-weight: bold;
 }
 .pargr2{
@@ -124,6 +124,7 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 175px;
+ 
   margin-right: 116px;
   font-weight: bold;
 }
@@ -133,6 +134,7 @@ a{
   margin-top: 20px;
   margin-left: 116px;
   font-weight: bold; 
+  font-family: "Avenir Next Cyr";
 }
 .imggr{
   float: right;
@@ -146,6 +148,7 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 40px;
+  font-family: "Avenir Next Cyr";
   margin-right: 63px;
   width: 40px;
 }
@@ -154,6 +157,7 @@ a{
   margin-bottom: 20px;
   margin-top: 20px;
   margin-right: 20px;
+  font-family: "Avenir Next Cyr";
   margin-left: 165px;
   width: 300px;
   height: 22px;
@@ -163,6 +167,7 @@ a{
   width: 21px;
   height: 22px;
   float: left;
+ font-family: "Avenir Next Cyr";
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left:100px; 
@@ -215,7 +220,7 @@ a{
 .search_input{
   width: 667px;
   height: 20px;
-  font-family: AvenirNextCyr;
+  font-family: "Avenir Next Cyr";
   font-size: 16px;
   color: #bcc1c8;
   border: 1px solid #ffffff;
