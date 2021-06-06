@@ -1,0 +1,385 @@
+body{
+  background-color: #f4f5f6;
+  
+}
+a{
+    color: #e8b32e;
+    text-decoration: none;
+}
+.zaggr{
+  font-size: 36px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: -844px;
+  font-family: 'Ledger';
+}
+.inpgr{
+  border: none;
+  width: 868px;
+  height: 50px;
+  padding-left: 20px;
+  margin-bottom: 51px;
+  background-image: url(IMG/logo.png) no-repeat;
+}
+.inpgrkn{
+  background: url(IMG/search-white-48-dp.svg) no-repeat 50% 50%;
+  height: 32px;
+  width: 42px;
+  border: none;
+  display: inline-block;
+  margin-top: 9px; 
+}
+.inpgrkn:hover{
+  cursor:pointer;
+}
+.divinpgr{
+  width: 958px;
+  height:52px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.parselgr{
+  width: 244px;
+  height: 18px;
+  margin: 13px 67px 1px 0;
+  font-family: 'AvenirNextCyr';
+  font-size: 14px;
+  color: #5c6470;
+  float: right;
+}
+.select{
+  float: right;
+  width: 130px;
+  height: 20px;
+  margin: 12px -280px 0 0;
+  position: relative;
+  background:  url(IMG/arrow-drop-down-white-48-dp.svg) no-repeat right;
+  background-size: 10px;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+} 
+.fa-caret-down{
+  z-index: 1;
+  cursor: pointer;
+  color: #bcc1c8;
+}
+.selgr{
+  border: 1px solid #ffffff; 
+  -webkit-appearance: none;
+  appearance: none;
+  width: 102px; 
+  height: 28px;
+  text-indent: 0.01px; 
+  margin: -6px 0 0 10px;
+  color: #25282d;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: 'AvenirNextCyr';
+  text-align-last: right;
+  padding: 5px 10px 5px 5px;
+}
+option{
+  direction: rtl;
+  padding: 10px 10px 10px 10px;
+}
+.divselgr{
+  width: 960px;
+  height: 40px;
+  background-color: #ffffff;
+  margin-top: 40px;
+  border-bottom: 1px solid #bcc1c8;
+  border-radius: 5px 5px 0 0; 
+  box-shadow: 0 1px 2px 0 #bcc1c8;;
+}
+.divgrtabl1{
+  width: 958px;
+  height: 62px;
+  border-bottom: 1px solid #bcc1c8;
+  background-color: #ffffff;
+  margin-left: -10px;
+}
+.divgrtabl{
+  width: 960px;
+  height: 62px;
+  border-bottom: 1px solid #bcc1c8;
+  margin-left: -10px;
+  background-color: #ffffff;
+}
+.divgrtabl:hover{
+  background-color: #f4f5f6;
+  cursor: pointer;
+  width: 958px;
+  height: 62px;
+}
+.divgrtabl:hover .polos {
+  width: 5px;
+  height: 64px;
+  background-color: #e8b32e;
+  display: inline-block;
+}
+.imggr{
+  float: right;
+  margin-top: 10px;
+}
+.imggr:hover{
+  cursor: pointer;
+}
+.pargr4{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 63px;
+  width: 40px;
+}
+.divgrtabl:last-child{
+  border-radius: 0 0 5px 5px;
+}
+.pargr5{
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 165px;
+  width: 300px;
+  height: 22px;
+  text-align: left;
+}
+.pargr6{
+  width: 21px;
+  height: 22px;
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left:100px; 
+  text-align: left;
+
+}
+.pargr6:nth-child(1){
+  width: 21px;
+  height: 22px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 80px; 
+
+}
+.polos{
+  width: 5px;
+  height: 64px;
+  background-color: #ffffff;
+  display: none;
+  margin-left: -1645px;
+  margin-top: -1px; 
+}
+.pargrgl{
+  text-align: center;
+}
+.search{
+  width: 960px;
+  height: 50px;
+  margin: 40px 0 0 0px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  background-color: #ffffff;
+}
+.search_icon{
+  width: 23px;
+  height: 23px;
+}
+.search_white_48dp {
+  width: 32px;
+  height: 32px;
+  margin: 9px 20px 9px -880px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.search_input_div{
+  width: 70px;
+  height: 20px;
+  margin: -10px 20px 9px -750px;
+}
+.search_input{
+  width: 667px;
+  margin-top: 2px;
+  height: 20px;
+  font-family: 'AvenirNextCyr';
+  font-size: 16px;
+  color: #bcc1c8;
+  border: 1px solid #ffffff;
+}
+.divgrtablgl{
+  width: 958px;
+  height: 412px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.main{
+  width: 960px;
+  height: auto;
+}
+.golova_main{
+  min-height: 687px;
+}
+
+/*Код из group_item.css*/
+.fio{
+  width: 920px;
+  height: 62px;
+  padding-left:  40px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  
+  border-bottom: 1px solid #bcc1c8;
+}
+.name_groups{
+  width: 105px;
+  height: 22px;
+  margin: 20px 125px 20px 0px;
+  font-family: "AvenirNextCyr";
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+  text-align: left;
+}
+.pib{
+  width: 204px;
+  height: 22px;
+  margin: 19px 106px 0 0px;
+  font-family: 'AvenirNextCyr';
+  font-size: 18px;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+}
+.students{
+  width: 130px;
+  height: 22px;
+  margin: 19px 174px 0 0px;
+  font-family: 'AvenirNextCyr';
+  font-size: 18px;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+}
+
+.student_information{
+  width: 960px;
+  height: 62px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  border-bottom: 1px solid #bcc1c8;
+}
+.student_information1{
+  width: 960px;
+  height: 62px;
+  background-color: #ffffff;
+  display: none;
+  border-radius: 0 0 5px 5px;
+}
+#no_rezult{
+  display: none;
+}
+.student_information:hover{
+  width: 960px;
+  height: 62px;  
+  background-color: #f4f5f6;
+  display: flex;
+  flex-direction: row;
+  border-left: 5px solid #e8b32e;
+}
+.student_information:hover .name_group{
+  margin: 19px 0px 9px 25px;
+}
+.student_information:last-child{
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+}
+.Three_Main{
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #bcc1c8;
+  margin-bottom: 80px;
+}
+.name_group{
+  width: 103px;
+  height: 22px;
+  margin: 19px 0px 9px 30px;
+  font-family: 'AvenirNextCyr';
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+}
+.pib_student{
+  width: 305px;
+  height: 22px;
+  margin: 19px 145px 9px 142px;
+  font-family: 'AvenirNextCyr';
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+  text-align: left;
+}
+.number_student{
+  width: 21px;
+  height: 22px;
+  font-family: 'AvenirNextCyr';
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+  margin: 20px 330px 20px -145px;
+  text-align: left;
+}
+.icon_student{
+  width: 20px;
+  height: 12px;
+  margin: 10px 0px 18px 319px;
+}
+.expand_more_white_48dp1 {
+  width: 48px;
+  height: 48px;
+  margin: 5px 5px 0 0;
+}
+.hidden{
+  display: none;
+}
+.log{
+  width: 166px;
+  height: 22px;
+  margin: 19px 387px 0;
+  font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c6470;
+}

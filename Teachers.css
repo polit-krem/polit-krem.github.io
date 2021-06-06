@@ -1,0 +1,316 @@
+body{
+    background-color: #f4f5f6;
+  }
+  a{
+      color: #e8b32e;
+      text-decoration: none;
+  }
+  .zaguch{
+    font-size: 36px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: -810px;
+  }
+  .inpgr{
+    border: none;
+    width: 868px;
+    height: 50px;
+    padding-left: 20px;
+    margin-bottom: 51px;
+    background-image: url(IMG/logo.png) no-repeat;
+  }
+  .inpgrkn{
+    background: url(IMG/search-white-48-dp.svg) no-repeat 50% 50%;
+    height: 32px;
+    width: 42px;
+    border: none;
+    display: inline-block;
+    margin-top: 9px; 
+  }
+  .inpgrkn:hover{
+    cursor:pointer;
+  }
+  .divinpgr{
+    width: 940px;
+    height:52px;
+    box-shadow: 0 1px 2px 0 #bcc1c8;
+  }
+  .parselgr{
+    width: 204px;
+    height: 18px;
+    margin: 1px 20px 1px 0;
+    font-family: AvenirNextCyr;
+    font-size: 14px;
+    color: #5c6470;
+    float: right;
+    margin-top: 11px;
+    margin-right: -15px;
+  }
+  .selgr{
+    border: 0 !important; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background: url(IMG/arrow-drop-down-white-48-dp.svg) no-repeat ; 
+    width: 20px; 
+    text-indent: 0.01px; 
+    text-overflow: ""; 
+    margin-bottom: -10px; 
+  }
+  
+  .imggr{
+    float: right;
+    margin-top: 10px;
+  }
+  .imggr:hover{
+    cursor: pointer;
+  }
+  
+  .imguchav{
+    float: left;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 40px;
+    margin-right: 122px;
+  }
+  .search{
+    width: 960px;
+    height: 50px;
+    margin: 40px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 #bcc1c8;
+    background-color: #ffffff;
+  }
+  .search_icon{
+    width: 23px;
+    height: 23px;
+  }
+  .search_white_48dp {
+    width: 32px;
+    height: 32px;
+    margin: 9px 20px 9px -880px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .search_input_div{
+    width: 70px;
+    height: 20px;
+    margin: -10px 20px 9px -750px;
+    color:  #bcc1c8;
+  }
+  .search_input{
+    width: 847px;
+    height: 20px;
+    margin-top: -4px;
+    padding: 5px 0;
+    font-family: AvenirNextCyr;
+    font-size: 16px;
+    color: #55585c;
+    border: 1px solid #ffffff;
+  }
+  .Three_Main{
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 #bcc1c8;
+  }
+  .fio{
+    width: 920px;
+    height: 62px;
+    padding-left:  40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #bcc1c8;
+  }
+  .name_groups{
+    width: 105px;
+    height: 22px;
+    margin: 20px 125px 20px 0px;
+    font-family: "AvenirNextCyr";
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+  }
+  
+  .pib{
+    width: 30px;
+    height: 20px;
+    margin: 20px 106px 0 0px;
+    font-family: 'AvenirNextCyr';
+    font-size: 18px;
+    font-weight: 550;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+  }
+  .students{
+    width: 130px;
+    height: 22px;
+    margin: 19px 174px 0 0px;
+    font-family: 'AvenirNextCyr';
+    font-size: 18px;
+    font-weight: 550;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+  }
+  
+  .student_information{
+    width: 960px;
+    height: 62px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border-bottom: 1px solid #bcc1c8;
+  }
+  .student_information1{
+    width: 960px;
+    height: 62px;
+    background-color: #ffffff;
+    display: none;
+    border-radius: 0 0 5px 5px;
+  }
+  .student_information:hover{
+    width: 960px;
+    height: 62px;  
+    background-color: #f4f5f6;
+    display: flex;
+    flex-direction: row;
+    border-left: 5px solid #e8b32e;
+  }
+  .student_information:hover .name_group{
+    margin: 19px 0px 9px 25px;
+  }
+  .student_information:last-child{
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 2px 0 #bcc1c8;
+  }
+  
+  .name_group{
+    width: 103px;
+    height: 22px;
+    margin: 19px 0px 9px 30px;
+    font-family: 'AvenirNextCyr';
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+  }
+  .pib_student{
+    width: 305px;
+    height: 22px;
+    margin: 19px 145px 9px 85px;
+    font-family: 'AvenirNextCyr';
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+    text-align: left;
+  }
+  .number_student{
+    width: 21px;
+    height: 22px;
+    font-family: 'AvenirNextCyr';
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #25282d;
+    margin: 20px 330px 20px -145px;
+    text-align: left;
+  }
+  .Avatar {
+    width: 48px;
+    height: 48px;
+    margin: 7px 40px 0 37px;
+  }
+  .student_information:hover .Avatar{
+    margin: 7px 40px 0 32px;
+  }
+  .icon_student{
+    width: 20px;
+    height: 12px;
+    margin: 10px 0px 18px 319px;
+  }
+  .expand_more_white_48dp1 {
+    width: 48px;
+    height: 48px;
+    margin: 5px 0px 0 230px;
+  }
+  .hidden{
+    display: none;
+  }
+  .log{
+    width: 166px;
+    height: 22px;
+    margin: 19px 387px 0;
+    font-family: AvenirNextCyr;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #5c6470;
+  }
+  .foto{
+    width: 46px;
+  height: 22px;
+  margin: 20px 124px 0 0;
+  font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
+}
+/***/
+.hidden{
+  display: none;
+}
+.log{
+  width: 166px;
+  height: 22px;
+  margin: 19px 387px 0;
+  font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c6470;
+}
+.main{
+  width: 960px;
+  height: auto;
+}
+.group{
+  display: flex;
+  flex-direction: column;
+}
+.golova_main{
+  min-height: 657px;
+}
