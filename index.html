@@ -21,7 +21,7 @@ a{
 .golova{
   width: 780px;
   height: 100px;
- font-family: 'Ledger', serif;
+  font-family: 'Ledger', serif;
   font-size: 36px;
   font-weight: normal;
   font-stretch: normal;
@@ -30,7 +30,8 @@ a{
   letter-spacing: normal;
   color: #212121;
   margin: auto;
-  padding: 0 0 40px;
+  margin-top: -10px;
+  padding: 0 0 40px 0;
   font-family: 'Avenir Next Cyr';
 }
 
@@ -62,7 +63,8 @@ html{overflow-x: hidden;}
     .main{
     width: 960px;
     height: 860px;
-    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-top: 66px;
     text-align: center;
     }
 
@@ -168,7 +170,7 @@ html{overflow-x: hidden;}
 .Pic_main {
   width: 492px;
   height: 451px;
-  margin: 40px 144px 0;
+  margin: 40px 0px 0px 0;
   object-fit: contain;
 }
 p{
@@ -183,10 +185,9 @@ p{
 }
 footer{
 	height: 110px;
-	width: 101%;
+	width: 100%;
 	background-color: #40464f;
-	margin-left: -8px;
-    margin-top: -22px;
+  margin-top: -30px;
 }
 .img{
 	margin-top: 20px;
@@ -194,11 +195,9 @@ footer{
 }
     
 .up{
-  width: 101.3%;
+  width: 100%;
   background-color: #40464f;
   height: 62px;
-  margin-left: -8px;
-  margin-top: -8px;
 }
 .par{	
 	float: left;
@@ -229,6 +228,10 @@ footer{
 	border-bottom: 1px solid #e8b32e;
   font-family: 'Avenir Next Cyr';
 }
+*{
+  margin: 0;
+  padding: 0;
+}
 </style>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link rel="stylesheet" type="text/css" href="AvenirNext/stylesheet.css">
@@ -237,7 +240,7 @@ footer{
 <body>
 <header>
     <div class="up">
-		<img src="IMG/logo.png" alt="" style="float: left; margin:  10px 10px 17px 15px;">
+		<a href="index.html"><img src="IMG/logo.png" alt="" style="float: left; margin:  10px 10px 17px 15px;"></a>
 		<p class="par1">Довідник наукового ліцею «Політ»</p>
 		<a href="index.html"><p class="par par4">Головна</p></a>
 		<a href="Groups.html"><p class="par">Групи</p></a>
@@ -254,10 +257,10 @@ footer{
         <div class="Rectangle1" onclick="group();"><h3 class="text1">Групи</h3></div>
         <div class="Rectangle2" onclick="teachers();"><h3 class="text2">Учителі</h3></div>
 
-        <img src="pic-main.png" class="Pic_main">
+        <img src="IMG/pic-main.png" class="Pic_main">
     </div>
 </center>
-<footer style="margin-bottom: -15px;">
+<footer style="margin-bottom: -10px;">
 		<a href="index.html"><p class="parag"><img src="IMG/logo.png" alt="" class="img"></p></a>
 		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 </footer>

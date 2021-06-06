@@ -15,6 +15,12 @@
   height: 22px;
   object-fit: contain;
   float: left;
+  margin: -2px 10px 0 0;
+}
+.group_home{
+  cursor: pointer;
+  width: 240px;
+  height: 25px;
 }
 .golova{
 	margin:auto;
@@ -75,15 +81,15 @@
   float: left;
 }
 .foto2 {
-  width: auto;
+  width: 380px;
   height: 421px;
-  margin-left: 10px;
+  margin-left: -10px;
   margin-top:-110px;
   border-radius: 5px;
   float: left;
 }
 .foto1 {
-  width: auto;
+  width: 380px;
   height: 421px;
   margin-left: 10px;
   margin-top:-112px;
@@ -295,7 +301,7 @@ float: left;
 }
 .prosebe_text{ 
   width: 750px;
-  height: 25px;
+  height: 75px;
   margin: 2px 129px 5px 30px;
   font-family: AvenirNextCyr;
   font-size: 21px;
@@ -305,6 +311,7 @@ float: left;
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
+  overflow-y:auto;
 }
 .prosebe{
   display: flex;
@@ -397,7 +404,7 @@ body{
   letter-spacing: normal;
   color: #25282d;
   height: 100px;
-  overflow: auto;
+  overflow: hidden;
 }
 .achievement_education{
     margin-top: 30px;
@@ -424,7 +431,31 @@ body{
   letter-spacing: normal;
   color: #25282d;
   height: 100px;
-  overflow: auto;
+}
+.li{
+  list-style-type: none;
+  padding-bottom: 10px;
+  width:298px;
+  height: 95px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.li1{
+  list-style-type: none;
+  padding-bottom: 10px;
+  width:298px;
+  height: 95px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.ul{
+  width:328px;
+  height: 95px;
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>
 <body>
@@ -437,16 +468,17 @@ body{
     <a href="Contacts.html"><p class="par">Контакти</p></a>
   </div></header>
 <div class="golova">
-  <p class="parag"><a href="Groups.html" id="goBack" onclick="javascript:history.go(-1)">  
-	<img src="west-black-48-dp.svg"
+  <div class="group_home" onclick="javascript:history.go(-1)">
+  <p class="parag">  
+	<img src="IMG/west-black-48-dp.svg"
      class="west_black_48dp">
-     <h3 class="restar">Повернутися до групи</h3>
+     <h3 class="restar" >Повернутися до групи</h3>
      <span id="
      result"></span>
     </p>
-</a>
+</div>
      <div class="Name_background" id="text">
-     	<img src="pic-pupil-item.png"
+     	<img src="IMG/pic-pupil-item.png"
      class="Pic_pupil_item">
      </div>
 <div class="foto" id="foto1">
@@ -456,7 +488,7 @@ body{
 </div> 
                 <div class="Rectangle_One">
                     <div class="Path">
-                        <img src="cake-black-48-dp.svg" class="self_improvement_black_48dp">
+                        <img src="IMG/cake-black-48-dp.svg" class="self_improvement_black_48dp">
                     </div>
                 <div class="date" id="data_Nam">
                     <h1 class="date_p">Дата народження</h1>
@@ -465,7 +497,7 @@ body{
                 </div>
                 <div class="Rectangle_Two">
                     <div class="Path">
-                        <img src="email-black-48-dp.svg" class="group_black_48dp">
+                        <img src="IMG/email-black-48-dp.svg" class="group_black_48dp">
                     </div>
                     <div class="email" id="email_ex">
                         <p class="email_name">Електронна пошта</p>
@@ -473,7 +505,7 @@ body{
                 </div>
                 <div class="Rectangle_Three">
                     <div class="Path">
-                        <img src="thumb-up-alt-black-48-dp.svg" class="school_black_48dp">
+                        <img src="IMG/thumb-up-alt-black-48-dp.svg" class="school_black_48dp">
                     </div>
                     <div class="Favourite" id="Favourite_name">
                         <p class="Favourite_course">Улюблений предмет</p>
@@ -481,7 +513,7 @@ body{
                 </div>
                 <div class="Rectangle_Four">
                     <div class="Path">
-                        <img src="text-snippet-black-48-dp.svg" class="text_snippet_black_48dp">
+                        <img src="IMG/text-snippet-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
                     <div class="prosebe" id="prosebe_text">
                         <p class="prosebe_name">Короткий опис про себе</p>
@@ -490,7 +522,7 @@ body{
                 </div>
                   <div class="Rectangle_Five">
                     <div class="Path">
-                        <img src="school-black-48-dp.svg" class="text_snippet_black_48dp">
+                        <img src="IMG/school-black-48-dp.svg" class="text_snippet_black_48dp">
                     </div>
                     <div class="subject" id="subject_name">
                         <p class="subject_education">Школа олімпійського резерву</p>
@@ -498,7 +530,7 @@ body{
                     </div>
                     <div class="Rectangle_Six">
                         <div class="Path">
-                            <img src="sentiment-satisfied-black-48-dp.svg" class="text_snippet_black_48dp">
+                            <img src="IMG/sentiment-satisfied-black-48-dp.svg" class="text_snippet_black_48dp">
                         </div>
                         <div class="interesting" id="interesting_name2">
                             <p class="interesting_education">Список інтересів</p>
@@ -507,7 +539,7 @@ body{
                       </div>
                          <div class="Rectangle_Seven">
                         <div class="Path">
-                            <img src="workspace-premium-black-48-dp.svg" class="text_snippet_black_48dp">
+                            <img src="IMG/workspace-premium-black-48-dp.svg" class="text_snippet_black_48dp">
                         </div>
                         <div class="achievement" id="achievement_name2">
                             <p class="achievement_education">Досягнення</p>
@@ -544,6 +576,7 @@ body{
                     const email_ex = document.createElement("p");
                     email_ex.className = "email_ex";
                     email_ex.innerHTML = data.email;
+                    if(data.email == null)
                     document.querySelector('#email_ex').appendChild(email_ex);
                 })
             })
@@ -593,11 +626,16 @@ body{
         fetch(new_url)
             .then((result) => {
                 result.json().then((data) => {
-                	console.log(data.achievements)
+                	console.log(data.interests)
                     const interesting_name2 = document.createElement("p");
                     interesting_name2.className = "interesting_name2";
-                    interesting_name2.innerHTML = data.interests;
-                    document.querySelector('#interesting_name2').appendChild(interesting_name2);
+                    let str = ' ';
+                            for (let i = 0; i< data.interests.length ; i++  ) {
+                                if (data.interests[i]!==undefined ) {
+                                str += data.interests[i]+'<br>';
+                                interesting_name2.innerHTML =   `<li class="li">${str}</li> <br>`;}
+                            }
+                            document.querySelector('#interesting_name2').appendChild(interesting_name2);
                 })
             })
         });
@@ -618,11 +656,18 @@ body{
         fetch(new_url)
             .then((result) => {
                 result.json().then((data) => {
-                	console.log(data.photo)
+                	console.log(data.achievements)
                     const achievement_name2 = document.createElement("p");
                     achievement_name2.className = "achievement_name2";
-                    achievement_name2.innerHTML =  data.achievements  ;
-                    document.querySelector('#achievement_name2').appendChild(achievement_name2);
+                    let str = ' ';
+                            for (let i = 0; i< data.achievements.length ; i++  ) {
+                                if (data.achievements[i]!==undefined ) {
+                                str += data.achievements[i]+'<br>';
+                                achievement_name2.innerHTML =   `<li class="li1">${str}</li> <br>`;}
+                            }
+                            document.querySelector('#achievement_name2').appendChild(achievement_name2);
+                    
+                    
                     if(data.achievements === null || data.achievements === " " || data.achievements.length == 0){
                       achievement_name2.innerHTML = "Немає";
                       document.querySelector('#achievement_name2').appendChild(achievement_name2);
@@ -651,6 +696,20 @@ body{
         document.getElementById("result").innerHTML = "Going back";
         window.history.back();
 });
+
+  var sortByNameBtn = document.getElementById('sortByName');
+        function sortingByName() {
+          var items = document.querySelectorAll('.student-information');
+          Array.from(items).sort(function(a, b) {
+            a = a.querySelector('.pib_student').innerText.toLowerCase()
+            b = b.querySelector('.pib_student').innerText.toLowerCase()
+            return (a > b) - (a < b)
+            }).forEach(function(n, i) {
+              n.style.order = i
+            })
+        }
+        sortByNameBtn.addEventListener('click', sortingByName);
+
 </script>
 </body>
 </html>

@@ -15,17 +15,18 @@
   <style>
       
 .foto2 {
-  width: auto;
+  width: 380px;
   height: 421px;
   margin-left: 10px;
   margin-top:-110px;
   border-radius: 5px;
   float: left;
+  max-width: 420px;
 }
 .foto1 {
-  width: auto;
+  width: 380px;
   height: 421px;
-  margin-left: 10px;
+  margin-left: -10px;
   margin-top:-112px;
   border-radius: 5px;
   box-shadow: 0 1px 2px 0 #bcc1c8;
@@ -45,7 +46,15 @@
     <a href="Contacts.html"><p class="par">Контакти</p></a>
   </div></header>
 <div class="golova" id="date_Nam">
-  
+    <div class="group_home" onclick="javascript:history.go(-1)">
+        <p class="parag">  
+          <img src="IMG/west-black-48-dp.svg"
+           class="west_black_48dp">
+           <h3 class="restar" >Повернутися назад</h3>
+           <span id="
+           result"></span>
+          </p>
+      </div>
      <div class="Name_background" id="text">
       <img src="IMG/pic-teacher-item.png"
      class="Pic_pupil_item">
@@ -137,11 +146,17 @@
         fetch(new_url)
             .then((result) => {
                 result.json().then((data) => {
-                	console.log(data.group.title)
+                	console.log(data.group)
                     const email_ex = document.createElement("p");
                     email_ex.className = "email_ex";
-                    email_ex.innerHTML = data.group.title;
-                    document.querySelector('#email_ex').appendChild(email_ex);
+                    if( data.group == null ||  data.group == ''){
+                        email_ex.innerHTML = 'Немає';
+                        document.querySelector('#email_ex').appendChild(email_ex);
+                    }
+                    else{
+                        email_ex.innerHTML = data.group.title;
+                        document.querySelector('#email_ex').appendChild(email_ex);
+                    }
                 })
             })
         });
@@ -180,8 +195,16 @@
                 	console.log(data.groups)
                     const non = document.createElement("p");
                     non.className = "interesting_name2";
-                    non.innerHTML = data.groups;
-                    document.querySelector('#interesting_name1').appendChild(non);
+                    let str = ' ';
+                            for (let i = 0; i< data.groups.length ; i++  ) {
+                                if (data.groups[i]!==undefined && data.groups.length <= 3) {
+                                str += data.groups[i]+'<br>';
+                                non.innerHTML =   `<li class="li">${str}</li> <br>`;}
+                                if(data.groups[i]!==undefined && data.groups.length > 3) {
+                                str += data.groups[i]+'<br>';
+                                non.innerHTML =   `<ul class="ul"><li class="li">${str}</li></ul> <br class="br">`;}
+                            }
+                            document.querySelector('#interesting_name1').appendChild(non);
                     
                 })
             })

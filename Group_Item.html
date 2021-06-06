@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Довідник наукового ліцею «Політ»</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <link rel="stylesheet" type="text/css" href="CSS/group_item.css">
     <link rel="stylesheet" type="text/css" href="CSS/Header.css">
     <link rel="stylesheet" type="text/css" href="CSS/Footer.css">
@@ -12,6 +13,8 @@
 	<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="AvenirNext/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	
 </head>
 <body>
     <header>
@@ -32,12 +35,12 @@
                         <div class="Path">
                             <img src="IMG/self-improvement-black-48-dp.svg" class="self_improvement_black_48dp">
                         </div>
-                    <div class="teacher"id="teacher_name">
+                    <div class="teacher"id="teacher_name2">
                         <h1 class="teacher_p" >Класний керівник</h1>
                         
                     </div>
                     <div class="icon">
-                            <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp"> 
+                            <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp2"  onclick="teacherGo()"> 
                         </div>
                     </div>
                     <div class="Rectangle_Two">
@@ -78,16 +81,21 @@
                     <img src="IMG/search-white-48-dp.svg" class="search_white_48dp">
                 </div>
                 <div class="search_input_div">
-                    <input type="text" placeholder="Пошук…" class="search_input">
+                    <input type="text" placeholder="Пошук…" class="search_input" id="filter">
                 </div>
             </div>
         </div>
-        <div class="Three_Main" id="api-fetch">
+        <div class="Three_Main" id="main">
             <div class="fio">
                 <p class="foto">Фото</p>
                 <p class="pib">ПІБ</p>
+                <button class="sortByName" id="sortByNameBtn"> <span class="button_sort">Сортувати за:</span> <span class="button_type">Алфавітом</span></button>
             </div>
-            
+            <div class="group" id="api_fetch">
+                <div class="student_information1" id="no_rezult">
+					<p class="log">Даних не знайдено</p>
+				</div>
+            </div>
         </div>
     </div>
     <center><footer>
@@ -130,13 +138,19 @@
                         console.log(data.formMaster.surname)
                         const teacher_name = document.createElement("p");
                         teacher_name.id = data.formMaster.id;
-            
                         teacher_name.className = "teacher_name";
                         teacher_name.innerHTML = data.formMaster.surname + " " + data.formMaster.name + " " + data.formMaster.patronymic ;
-                        document.querySelector('#teacher_name').appendChild(teacher_name);
+                        document.querySelector('#teacher_name2').appendChild(teacher_name);
                     })
                 })
             });  
+    function teacherGo(){
+        var id = document.querySelector(".teacher_name").getAttribute("id");
+        console.log(id)
+        var upl_teacher = "teacher_item.html?id=" + id;
+        console.log(upl_teacher)
+            window.location.href = upl_teacher;
+    }
             window.addEventListener("load", async function() {
             fetch(new_url)
                 .then((result) => {
@@ -165,39 +179,85 @@
             fetch(new_url)
                 .then((result) => {
                     result.json().then((data) => {
+                        
                             console.log(data.advancedSubjects)
-                            const subject_name = document.createElement("p");
+                            const subject_name = document.createElement("ul");
                             subject_name.className = "subject_name";
-                            subject_name.innerHTML =   `<p>${data.advancedSubjects}</p> `;
+                            let str = ' ';
+                            for (let i = 0; i< data.advancedSubjects.length; i++  ) {
+                                if (data.advancedSubjects[i]!==undefined) 
+                                str += data.advancedSubjects[i]+'<br>';
+                                subject_name.innerHTML =   `<li class="li">${str}</li> <br class="br">`;
+                            }
                             document.querySelector('#subject_name').appendChild(subject_name);
                     })
                 })
             }); 
             window.addEventListener("load", async function() {
-        fetch("https://alexmarchukprod.com.ua/students")
+            fetch("https://alexmarchukprod.com.ua/students")
             .then((result) => {
                 result.json().then((data) => {
                     data.forEach((item) => {
                         const output = document.createElement("div");
                         output.className = "student_information";
-                        output.innerHTML = `
-                                            <div class="vertical_stripe"></div>
-                                            <img class="Avatar" src="IMG/avatar.png">
+                        output.innerHTML = `<img class="Avatar" src="IMG/avatar.png">
                                             <p class="pib_student" >${item.surname} ${item.name} ${item.patronymic}</p>
-                                            <div class="icon_student">
-                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go2();" style="margin-left: -40px" id="${item.id}"> 
-                                            </div>`;
-                        document.querySelector('#api-fetch').appendChild(output);
+                                            <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go2();" id="${item.id}">`;
+                        document.querySelector('#api_fetch').appendChild(output);
                     })
                 })
             })
     });
+
     function go2(){
-            var id = event.target.getAttribute('id');;
+            var id = event.target.getAttribute('id');
             var upl = "pupil_item.html?id=" + id;
             console.log(upl)
             window.location.href = upl;
         } 
+
+        $("#filter").keyup(function() {
+		var filter = $(this).val(),
+		count = 0;
+		$('#api_fetch .student_information').each(function() {
+		if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+			$(this).hide();  
+				var numrelated=$('.group > .student_information:visible').length;
+				console.log(numrelated);
+			if(numrelated > 0){
+				main.style.marginBottom = "80px";
+                document.getElementById("no_rezult").style.display = "none";
+			}
+			if(numrelated === 4){
+				main.style.marginBottom = "-21px";
+			}			
+			if(numrelated === 0){
+				document.getElementById("no_rezult").style.display = "flex";
+				main.style.marginBottom = "80px";
+			}
+		}
+		
+		else {
+			$(this).show(); 
+			count++;
+		}
+		});
+		});
+		
+        var sortByNameBtn = document.getElementById('sortByNameBtn');
+
+        function sortingByName() {
+        var items = document.querySelectorAll('.student_information');
+        Array.from(items).sort(function(a, b) {
+            a = a.querySelector('.pib_student').innerText.toLowerCase()
+            b = b.querySelector('.pib_student').innerText.toLowerCase()
+            return (a > b) - (a < b)
+        }).forEach(function(n, i) {
+            n.style.order = i
+        })
+        }
+
+        sortByNameBtn.addEventListener('click', sortingByName);
     </script>
 </body>
 </html>
