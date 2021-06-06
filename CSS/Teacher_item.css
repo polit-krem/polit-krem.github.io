@@ -10,11 +10,12 @@
   height: 330px;
 }
 .restar{
-  
+  cursor: pointer;
   height: 22px;
   margin: 0 0 0 10px;
   font-size: 18px;
   color: orange;
+  width: 220px;
 }
 .Name_background {
   width: 940px;
@@ -22,7 +23,7 @@
   margin: auto;
   border-radius: 5px;
   background-color: #749bd2;
-  margin-top: 150px;
+  margin-top: 30px;
 }
 .text1{
   width: 438px;
@@ -184,7 +185,7 @@ body{
   float: left;
 }
 .date_name{
-  width: 264px;
+  width: 324px;
   height: 25px;
   margin: 2px 129px 5px 30px;
   Font-family: AvenirNextCyr;
@@ -348,4 +349,24 @@ body{
   width: 73px;
   height: 25px;
   border: 1px solid black;
+}
+.li{
+  list-style-type: none;
+  padding-bottom: 10px;
+  width:108px;
+  height: 95px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ul{
+  width:308px;
+  height: 95px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.group_home{
+  cursor: pointer;
+  width: 240px;
+  height: 25px;
 }

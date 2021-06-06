@@ -1,6 +1,7 @@
 .Rectangle_Main{
     width: 960px;
     height: auto;
+    min-height: 732px;
     margin: auto;
     padding: 80px 10px 80px 10px;
 }

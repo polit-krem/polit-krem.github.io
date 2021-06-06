@@ -84,6 +84,15 @@
   margin-left: 10px;
   margin-top: -5px;
 }
+.expand_more_white_48dp2 {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transform: rotate(360deg);
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: -5px;
+}
 .expand_more_white_48dp1 {
   width: 40px;
   height: 40px;
@@ -216,6 +225,13 @@
   letter-spacing: normal;
   color: #25282d;
   word-wrap:  break-word ;
+  
+}
+.li{
+  list-style-type: none;
+  padding-bottom: 10px;
+  width:208px;
+  height: 25px;
 }
 .text_snippet_black_48dp  {
   width: 77px;
@@ -300,7 +316,7 @@
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
-  
+  border-radius: 5px 5px 0 0 ;
   border-bottom: 1px solid #bcc1c8;
 }
 .foto{
@@ -339,27 +355,34 @@
   cursor: pointer;
   border-bottom: 1px solid #bcc1c8;
 }
-.vertical_stripe{
+.student_information1{
+  width: 960px;
+  height: 62px;
   background-color: #ffffff;
-  width:5px;
-  height: 62px;
-}
-.student_information:hover .vertical_stripe{
-  width: 5px;
-  height: 62px;
-  background-color: #e8b32e;
+  display: none;
+  border-radius: 0 0 5px 5px;
 }
 .student_information:hover{
-  width: 960px;
+  width: 955px;
   height: 62px;  
   background-color: #f4f5f6;
   display: flex;
   flex-direction: row;
+  border-left: 5px solid #e8b32e;
+}
+.student_information:hover .Avatar{
+  margin: 7px 40px 0 39px;
+}
+.expand_more_white_48dp1{
+  margin: 10px 20px 0 0;
+}
+.student_information:last-child{
+  border-radius: 0 0 5px 5px;
 }
 .Avatar {
   width: 48px;
   height: 48px;
-  margin: 7px 40px;
+  margin: 7px 40px 0 44px;
 }
 .pib_student{
   width: 450px;
@@ -382,4 +405,64 @@
 }
 body{
   background-color:#f4f5f6;
+}
+.hidden{
+  display: none;
+}
+.log{
+  width: 166px;
+  height: 22px;
+  margin: 19px 387px 0;
+  font-family: AvenirNextCyr;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c6470;
+}
+.main{
+  width: 960px;
+  height: auto;
+}
+.student_information1{
+  width: 960px;
+  height: 62px;
+  background-color: #ffffff;
+  display: none;
+}
+/*сортировка*/
+#sortByNameBtn{
+  width: 200px;
+  height: 22px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  margin: 20px 0 0 500px;
+
+}
+.group{
+  display: flex;
+  flex-direction: column;
+}
+.button_sort{
+  font-family: AvenirNextCyr-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c6470;
+}
+.button_type{
+  font-family: AvenirNextCyr-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #25282d;
 }
