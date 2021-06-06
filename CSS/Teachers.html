@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/Footer.css">
+	<link rel="stylesheet" href="CSS/Header.css">
+	<link rel="stylesheet" href="CSS/Teachers.css">
+	<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
+	<title>Довідник наукового ліцею «Політ»</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<header><div class="up">
+		<a href="index.html" class="alogo"><img src="IMG/logo.png" class="imgh"></a>
+		<p class="par" id="par1">Довідник наукового ліцею «Політ»</p>
+		<a href="index.html"><p class="par">Головна</p></a>
+		<a href="Groups.html"><p class="par" class="pargr">Групи</p></a>
+		<a href="Teachers.html"><p class="par" style="color: #e8b32e; border-bottom: 1px solid #e8b32e; cursor: pointer;">Учителі</p></a>
+		<a href="Contacts.html"><p class="par">Контакти</p></a>
+	</div></header>
+<center>
+    <div class="golova_main">
+        <p class="zaguch">Учителі</p>
+        <div class="search">
+            <div class="search_icon">
+                <img src="IMG/search-white-48-dp.svg" class="search_white_48dp">
+            </div>
+            <div class="search_input_div">
+                <input type="text" placeholder="Пошук…" class="search_input" id="filter">
+            </div>
+        </div>
+        <div class="Three_Main" id="main">
+            <div class="fio">
+                <p class="foto">Фото</p>
+                <p class="pib">ПІБ</p>
+            </div>
+            <div class="group" id="api_fetch">
+				<div class="student_information1" id="no_rezult">
+					<p class="log">Даних не знайдено</p>
+				</div>
+			</div>
+        </div>
+    </div>
+</center>
+	<center><footer style="margin-top: 171px; ">
+		<a href="index.html"><p><img src="IMG/logo.png" class="imgfoot"></p></a>
+		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
+	</footer></center>
+    <script>
+        var newWin;
+        window.addEventListener("load", async function() {
+        fetch("https://alexmarchukprod.com.ua/teachers")
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((item) => {
+                        const output = document.createElement("div");
+                        output.className = "student_information";
+                        output.innerHTML = `
+                                            <img class="Avatar" src="IMG/avatar.png">
+                                            <p class="pib_student" >${item.surname} ${item.name} ${item.patronymic}</p>
+                                                <img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go();" id="${item.id}"> 
+                                            `;
+                        
+                        document.querySelector('#api_fetch').appendChild(output);
+
+                    })
+                })
+            })
+        });
+
+        function go(){
+            var id = event.target.getAttribute('id');;
+            var upl = "Teacher_item.html?id=" + id;
+            console.log(upl)
+            window.location.href = upl;
+        }  
+
+        $("#filter").keyup(function() {
+		var filter = $(this).val(),
+		count = 0;
+		
+		$('#api_fetch .student_information').each(function() {
+		if ($(this).text().search(new RegExp(filter, "i")) < 0) {		var numrelated=$('.group > .student_information:visible').length;
+			console.log(numrelated);
+			$(this).hide();  
+				
+			if(numrelated == 1){
+				main.style.marginBottom = "308px";
+				document.getElementById("no_rezult").style.display = "none";
+			}	
+			if(numrelated === 4){
+				main.style.marginBottom = "-21px";
+			}
+			if(numrelated === 2){
+				main.style.marginBottom = "80px";
+			}
+			if(numrelated === 3){
+				main.style.marginBottom = "80px";
+			}			
+			if(numrelated === 0){
+				document.getElementById("no_rezult").style.display = "flex";
+				main.style.marginBottom = "80px";
+			}
+		}
+		
+		else {
+			$(this).show(); 
+			count++;
+		}
+		});
+		});
+		
+    </script>
+       
+</body>
+</html>

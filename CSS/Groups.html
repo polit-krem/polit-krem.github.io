@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/Footer.css">
+	<link rel="stylesheet" href="CSS/Header.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+	<link rel="stylesheet" href="CSS/Group.css">
+	<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="AvenirNextCyr/stylesheet.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	
+	<title>Довідник наукового ліцею «Політ»</title>
+</head>
+<body>
+	<header><div class="up">
+		<a href="index.html" class="alogo"><img src="IMG/logo.png" class="imgh"></a>
+		<p class="par" id="par1">Довідник наукового ліцею «Політ»</p>
+		<a href="index.html"><p class="par">Головна</p></a>
+		<a href="Groups.html"><p class="par" class="pargr" style="color: #e8b32e; border-bottom: 1px solid #e8b32e; cursor: pointer;">Групи</p></a>
+		<a href="Teachers.html"><p class="par">Учителі</p></a>
+		<a href="Contacts.html"><p class="par">Контакти</p></a>
+	
+	</div></header>
+<center>
+	<div class="golova_main">
+		<p class="zaggr">Групи</p>
+		<div class="search">
+			<div class="search_icon">
+				<img src="IMG/search-white-48-dp.svg" class="search_white_48dp">
+			</div>
+			<div class="search_input_div">
+				<input type="text" placeholder="Пошук…" class="search_input" id="filter">
+			</div>
+		</div>
+		<div class="divgrtablgl" style="height: auto; border-radius: 5px;">
+			<div class="divselgr">
+				<p class="parselgr">Сортувати за:   
+					<div class="select">
+						<select class="selgr" id="sort">
+							<option value="1" selected>Замовченням</option>
+							<option value="2">Зростанням</option>
+							<option value="3">Спаданням</option>
+						</select>
+						<i class="fas fa-caret-down"></i>
+					</div>
+				</p>
+			</div>
+			<div class="Three_Main" id="main">
+				<div class="fio">
+					<p class="name_groups">Назва групи</p>
+					<p class="pib">ПІБ класного керівника</p>
+					<p class="students">Кількість учнів</p>
+				</div>
+				<div class="group" id="api_fetch">
+					<div class="student_information1" id="no_rezult">
+						<p class="log">Даних не знайдено</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</center>
+	<center><footer style="margin-top: 140px;">
+		<a href="index.html"><img src="IMG/logo.png" class="imgfoot"></a>
+		<p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
+	</footer></center>
+<script >
+        window.addEventListener("load", async function() {
+        fetch("https://alexmarchukprod.com.ua/groups")
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((item) => {
+                        const output = document.createElement("div");
+                        output.className = "student_information";
+                        
+                        if(item.formMaster == null ){
+                          console.log(item.title)
+                          output.innerHTML = `
+								<div class="vertical_stripe"></div>
+								<p class="name_group">${item.title}</p>
+								<p class="pib_student" >ПІБ</p>
+								<p class="number_student"><span>${item.students.length}</span></p>
+									<img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go2();" style="margin-left: -40px" value="${item.id}"> `;
+                        document.querySelector('#api_fetch').appendChild(output);
+                        console.log(item.title)
+
+                        }else{
+                        output.innerHTML = `
+								<div class="vertical_stripe"></div>
+								<p class="name_group">${item.title}</p>
+								<p class="pib_student" >${item.formMaster.surname} ${item.formMaster.name} ${item.formMaster.patronymic}</p>
+								<p class="number_student"><span>${item.students.length}</span></p>
+									<img src="IMG/expand-more-white-48-dp.svg" class="expand_more_white_48dp1" onclick="go();" style="margin-left: -40px" value="${item.id}">`;
+                        document.querySelector('#api_fetch').appendChild(output);
+                        }
+                    })
+                })
+            })
+    });
+	
+	function go(){
+            var id = event.target.getAttribute('value');;
+            var upl = "Group_Item.html?id=" + id;
+            console.log(upl)
+            window.location.href = upl;
+        }  
+	divs=$.makeArray($('#api_fetch').children());
+    $.each(divs,(i,d)=>$('#api_fetch').append(d));
+    $('#sort').change(function(){
+    var sorttype=$(this).val()-1;
+    var divs=$.makeArray($('#api_fetch').children());
+    divs.sort(function(a,b){
+      switch(sorttype){
+      case 0: return $('span',b).text()-$('span',a).text();
+      case 1: 
+        return $('span',b).text()-$('span',a).text();
+      case 2: 
+        return $('span',a).text()-$('span',b).text();
+      }
+    });
+    $.each(divs,(i,d)=>$('#api_fetch').append(d))
+    })  
+
+	
+
+	$("#filter").keyup(function() {
+		var filter = $(this).val(),
+		count = 0;
+		/*var parent = document.getElementById("api_fetch");
+		var nodesSameClass = parent.getElementsByClassName("student_information");
+		console.log(nodesSameClass.length);*/
+		
+		$('#api_fetch .student_information').each(function() {
+		if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+			$(this).hide();  
+				var numrelated=$('.group > .student_information:visible').length;
+				console.log(numrelated);
+			if(numrelated === 1){
+				document.getElementById("no_rezult").style.display = "none";
+			}	
+			if(numrelated === 4){
+				main.style.marginBottom = "-21px";
+			}			
+			if(numrelated === 0){
+				document.getElementById("no_rezult").style.display = "flex";
+				main.style.marginBottom = "309px";
+			}
+		}
+		
+		else {
+			$(this).show(); 
+			count++;
+		}
+		});
+		});
+	/*document.querySelector('#filter').oninput =function(){
+		let val = this.value.trim();
+		let  elasticItem = document.querySelectorAll('.group div');
+		if (val != ''){
+			elesticItem.forEach(function(elem){
+			if (elem.innerText.search(val) == -1) {
+				elem.classList.add('hide');
+			}
+			else {
+				elem.classList.remove('hide');
+			}
+		});
+		}
+		else {
+			elesticItem.forEach(function(elem) {
+				elem.classList.remove('hide')
+			});
+		}
+	}*/
+</script>
+</body>
+
+</html>
