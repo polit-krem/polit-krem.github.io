@@ -42,13 +42,15 @@
   margin-top: 30px;
 }
 .text1{
-  width: 438px;
-  height: 50px;
- font-family: 'Ledger', serif;
+  width: 488px;
+  height: 100px;
+  font-family: 'Ledger', serif;
   font-size: 36px;
   color: #ffffff;
   padding-left: 30px;
   margin-top: -120px;
+  display: flex;
+  align-items: center;
 }
 .Pic_pupil_item {
   width: 380px;
@@ -547,7 +549,7 @@ body{
                         </div>
                       </div>
 </div>
-<center><footer>
+<center><footer style="margin-top: 1060px;">
     <a href="index.html"><p><img src="IMG/logo.png" class="imgfoot"></p></a>
     <p class="copy">©Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</p>
 </footer></center>
@@ -576,6 +578,7 @@ body{
                     const email_ex = document.createElement("p");
                     email_ex.className = "email_ex";
                     email_ex.innerHTML = data.email;
+                    document.querySelector('#email_ex').appendChild(email_ex);
                     if(data.email == null)
                     document.querySelector('#email_ex').appendChild(email_ex);
                 })
